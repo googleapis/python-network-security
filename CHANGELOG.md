@@ -3,14 +3,14 @@
 ### [0.1.3](https://www.github.com/googleapis/python-network-security/compare/v0.1.2...v0.1.3) (2021-07-29)
 
 
-### Features
-
-* add Samples section to CONTRIBUTING.rst ([#11](https://www.github.com/googleapis/python-network-security/issues/11)) ([4b62e92](https://www.github.com/googleapis/python-network-security/commit/4b62e9208cc879a4f870da39839579a693f4e691))
-
-
 ### Bug Fixes
 
 * enable self signed jwt for grpc ([#15](https://www.github.com/googleapis/python-network-security/issues/15)) ([1cea5e5](https://www.github.com/googleapis/python-network-security/commit/1cea5e5f2f171d57b9d08eb141270be9c3c9c805))
+
+
+### Documentation
+
+* add Samples section to CONTRIBUTING.rst ([#11](https://www.github.com/googleapis/python-network-security/issues/11)) ([4b62e92](https://www.github.com/googleapis/python-network-security/commit/4b62e9208cc879a4f870da39839579a693f4e691))
 
 
 ### Miscellaneous Chores
