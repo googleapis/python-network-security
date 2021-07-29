@@ -68,14 +68,9 @@ Using ``nox``
 We use `nox <https://nox.readthedocs.io/en/latest/>`__ to instrument our tests.
 
 - To test your changes, run unit tests with ``nox``::
+    $ nox -s unit
 
-    $ nox -s unit-3.6
-    $ nox -s unit-3.7
-    $ nox -s unit-3.8
-    $ nox -s unit-3.9
-
-- Args to pytest can be passed through the nox command separated by a `--`. For
-  example, to run a single test::
+- To run a single unit test::
 
     $ nox -s unit-3.9 -- -k <name of test>
 
@@ -145,7 +140,7 @@ Running System Tests
 - To run system tests, you can execute::
 
    # Run all system tests
-   $ nox -s system-3.8
+   $ nox -s system
 
    # Run a single system test
    $ nox -s system-3.8 -- -k <name of test>
@@ -181,6 +176,30 @@ or adds the feature.
 Build the docs via:
 
    $ nox -s docs
+
+*************************
+Samples and code snippets
+*************************
+
+Code samples and snippets live in the `samples/` catalogue. Feel free to
+provide more examples, but make sure to write tests for those examples.
+Each folder containing example code requires its own `noxfile.py` script
+which automates testing. If you decide to create a new folder, you can
+base it on the `samples/snippets` folder (providing `noxfile.py` and
+the requirements files).
+
+The tests will run against a real Google Cloud Project, so you should
+configure them just like the System Tests.
+
+- To run sample tests, you can execute::
+
+   # Run all tests in a folder
+   $ cd samples/snippets
+   $ nox -s py-3.8
+
+   # Run a single sample test
+   $ cd samples/snippets
+   $ nox -s py-3.8 -- -k <name of test>
 
 ********************************************
 Note About ``README`` as it pertains to PyPI
