@@ -475,8 +475,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
         location.
 
 
-
-        .. code-block::
+        .. code-block:: python
 
             from google.cloud import network_security_v1beta1
 
@@ -581,8 +580,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
     ) -> authorization_policy.AuthorizationPolicy:
         r"""Gets details of a single AuthorizationPolicy.
 
-
-        .. code-block::
+        .. code-block:: python
 
             from google.cloud import network_security_v1beta1
 
@@ -684,8 +682,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
         and location.
 
 
-
-        .. code-block::
+        .. code-block:: python
 
             from google.cloud import network_security_v1beta1
 
@@ -831,8 +828,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
         AuthorizationPolicy.
 
 
-
-        .. code-block::
+        .. code-block:: python
 
             from google.cloud import network_security_v1beta1
 
@@ -965,8 +961,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
     ) -> operation.Operation:
         r"""Deletes a single AuthorizationPolicy.
 
-
-        .. code-block::
+        .. code-block:: python
 
             from google.cloud import network_security_v1beta1
 
@@ -1088,8 +1083,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
         location.
 
 
-
-        .. code-block::
+        .. code-block:: python
 
             from google.cloud import network_security_v1beta1
 
@@ -1190,8 +1184,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
     ) -> server_tls_policy.ServerTlsPolicy:
         r"""Gets details of a single ServerTlsPolicy.
 
-
-        .. code-block::
+        .. code-block:: python
 
             from google.cloud import network_security_v1beta1
 
@@ -1291,8 +1284,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
         location.
 
 
-
-        .. code-block::
+        .. code-block:: python
 
             from google.cloud import network_security_v1beta1
 
@@ -1427,8 +1419,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
     ) -> operation.Operation:
         r"""Updates the parameters of a single ServerTlsPolicy.
 
-
-        .. code-block::
+        .. code-block:: python
 
             from google.cloud import network_security_v1beta1
 
@@ -1554,8 +1545,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
     ) -> operation.Operation:
         r"""Deletes a single ServerTlsPolicy.
 
-
-        .. code-block::
+        .. code-block:: python
 
             from google.cloud import network_security_v1beta1
 
@@ -1673,8 +1663,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
         location.
 
 
-
-        .. code-block::
+        .. code-block:: python
 
             from google.cloud import network_security_v1beta1
 
@@ -1775,8 +1764,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
     ) -> client_tls_policy.ClientTlsPolicy:
         r"""Gets details of a single ClientTlsPolicy.
 
-
-        .. code-block::
+        .. code-block:: python
 
             from google.cloud import network_security_v1beta1
 
@@ -1875,8 +1863,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
         location.
 
 
-
-        .. code-block::
+        .. code-block:: python
 
             from google.cloud import network_security_v1beta1
 
@@ -2010,8 +1997,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
     ) -> operation.Operation:
         r"""Updates the parameters of a single ClientTlsPolicy.
 
-
-        .. code-block::
+        .. code-block:: python
 
             from google.cloud import network_security_v1beta1
 
@@ -2136,8 +2122,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
     ) -> operation.Operation:
         r"""Deletes a single ClientTlsPolicy.
 
-
-        .. code-block::
+        .. code-block:: python
 
             from google.cloud import network_security_v1beta1
 
