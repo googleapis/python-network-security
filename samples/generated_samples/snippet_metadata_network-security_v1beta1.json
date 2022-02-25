@@ -10,8 +10,8 @@
           "shortName": "CreateAuthorizationPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_create_authorization_policy_async.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_CreateAuthorizationPolicy_async",
+      "file": "networksecurity_v1beta1_generated_network_security_create_authorization_policy_async.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateAuthorizationPolicy_async",
       "segments": [
         {
           "end": 54,
@@ -54,8 +54,8 @@
           "shortName": "CreateAuthorizationPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_create_authorization_policy_sync.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_CreateAuthorizationPolicy_sync",
+      "file": "networksecurity_v1beta1_generated_network_security_create_authorization_policy_sync.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateAuthorizationPolicy_sync",
       "segments": [
         {
           "end": 54,
@@ -99,8 +99,8 @@
           "shortName": "CreateClientTlsPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_create_client_tls_policy_async.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_CreateClientTlsPolicy_async",
+      "file": "networksecurity_v1beta1_generated_network_security_create_client_tls_policy_async.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateClientTlsPolicy_async",
       "segments": [
         {
           "end": 53,
@@ -143,8 +143,8 @@
           "shortName": "CreateClientTlsPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_create_client_tls_policy_sync.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_CreateClientTlsPolicy_sync",
+      "file": "networksecurity_v1beta1_generated_network_security_create_client_tls_policy_sync.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateClientTlsPolicy_sync",
       "segments": [
         {
           "end": 53,
@@ -188,8 +188,8 @@
           "shortName": "CreateServerTlsPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_create_server_tls_policy_async.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_CreateServerTlsPolicy_async",
+      "file": "networksecurity_v1beta1_generated_network_security_create_server_tls_policy_async.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateServerTlsPolicy_async",
       "segments": [
         {
           "end": 53,
@@ -232,8 +232,8 @@
           "shortName": "CreateServerTlsPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_create_server_tls_policy_sync.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_CreateServerTlsPolicy_sync",
+      "file": "networksecurity_v1beta1_generated_network_security_create_server_tls_policy_sync.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_CreateServerTlsPolicy_sync",
       "segments": [
         {
           "end": 53,
@@ -277,8 +277,8 @@
           "shortName": "DeleteAuthorizationPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_delete_authorization_policy_async.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_DeleteAuthorizationPolicy_async",
+      "file": "networksecurity_v1beta1_generated_network_security_delete_authorization_policy_async.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteAuthorizationPolicy_async",
       "segments": [
         {
           "end": 48,
@@ -321,8 +321,8 @@
           "shortName": "DeleteAuthorizationPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_delete_authorization_policy_sync.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_DeleteAuthorizationPolicy_sync",
+      "file": "networksecurity_v1beta1_generated_network_security_delete_authorization_policy_sync.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteAuthorizationPolicy_sync",
       "segments": [
         {
           "end": 48,
@@ -366,8 +366,8 @@
           "shortName": "DeleteClientTlsPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_delete_client_tls_policy_async.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_DeleteClientTlsPolicy_async",
+      "file": "networksecurity_v1beta1_generated_network_security_delete_client_tls_policy_async.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteClientTlsPolicy_async",
       "segments": [
         {
           "end": 48,
@@ -410,8 +410,8 @@
           "shortName": "DeleteClientTlsPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_delete_client_tls_policy_sync.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_DeleteClientTlsPolicy_sync",
+      "file": "networksecurity_v1beta1_generated_network_security_delete_client_tls_policy_sync.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteClientTlsPolicy_sync",
       "segments": [
         {
           "end": 48,
@@ -455,8 +455,8 @@
           "shortName": "DeleteServerTlsPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_delete_server_tls_policy_async.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_DeleteServerTlsPolicy_async",
+      "file": "networksecurity_v1beta1_generated_network_security_delete_server_tls_policy_async.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteServerTlsPolicy_async",
       "segments": [
         {
           "end": 48,
@@ -499,8 +499,8 @@
           "shortName": "DeleteServerTlsPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_delete_server_tls_policy_sync.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_DeleteServerTlsPolicy_sync",
+      "file": "networksecurity_v1beta1_generated_network_security_delete_server_tls_policy_sync.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_DeleteServerTlsPolicy_sync",
       "segments": [
         {
           "end": 48,
@@ -544,8 +544,8 @@
           "shortName": "GetAuthorizationPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_get_authorization_policy_async.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_GetAuthorizationPolicy_async",
+      "file": "networksecurity_v1beta1_generated_network_security_get_authorization_policy_async.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetAuthorizationPolicy_async",
       "segments": [
         {
           "end": 44,
@@ -588,8 +588,8 @@
           "shortName": "GetAuthorizationPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_get_authorization_policy_sync.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_GetAuthorizationPolicy_sync",
+      "file": "networksecurity_v1beta1_generated_network_security_get_authorization_policy_sync.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetAuthorizationPolicy_sync",
       "segments": [
         {
           "end": 44,
@@ -633,8 +633,8 @@
           "shortName": "GetClientTlsPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_get_client_tls_policy_async.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_GetClientTlsPolicy_async",
+      "file": "networksecurity_v1beta1_generated_network_security_get_client_tls_policy_async.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetClientTlsPolicy_async",
       "segments": [
         {
           "end": 44,
@@ -677,8 +677,8 @@
           "shortName": "GetClientTlsPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_get_client_tls_policy_sync.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_GetClientTlsPolicy_sync",
+      "file": "networksecurity_v1beta1_generated_network_security_get_client_tls_policy_sync.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetClientTlsPolicy_sync",
       "segments": [
         {
           "end": 44,
@@ -722,8 +722,8 @@
           "shortName": "GetServerTlsPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_get_server_tls_policy_async.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_GetServerTlsPolicy_async",
+      "file": "networksecurity_v1beta1_generated_network_security_get_server_tls_policy_async.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetServerTlsPolicy_async",
       "segments": [
         {
           "end": 44,
@@ -766,8 +766,8 @@
           "shortName": "GetServerTlsPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_get_server_tls_policy_sync.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_GetServerTlsPolicy_sync",
+      "file": "networksecurity_v1beta1_generated_network_security_get_server_tls_policy_sync.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_GetServerTlsPolicy_sync",
       "segments": [
         {
           "end": 44,
@@ -811,8 +811,8 @@
           "shortName": "ListAuthorizationPolicies"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_list_authorization_policies_async.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_ListAuthorizationPolicies_async",
+      "file": "networksecurity_v1beta1_generated_network_security_list_authorization_policies_async.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListAuthorizationPolicies_async",
       "segments": [
         {
           "end": 45,
@@ -855,8 +855,8 @@
           "shortName": "ListAuthorizationPolicies"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_list_authorization_policies_sync.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_ListAuthorizationPolicies_sync",
+      "file": "networksecurity_v1beta1_generated_network_security_list_authorization_policies_sync.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListAuthorizationPolicies_sync",
       "segments": [
         {
           "end": 45,
@@ -900,8 +900,8 @@
           "shortName": "ListClientTlsPolicies"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_list_client_tls_policies_async.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_ListClientTlsPolicies_async",
+      "file": "networksecurity_v1beta1_generated_network_security_list_client_tls_policies_async.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListClientTlsPolicies_async",
       "segments": [
         {
           "end": 45,
@@ -944,8 +944,8 @@
           "shortName": "ListClientTlsPolicies"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_list_client_tls_policies_sync.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_ListClientTlsPolicies_sync",
+      "file": "networksecurity_v1beta1_generated_network_security_list_client_tls_policies_sync.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListClientTlsPolicies_sync",
       "segments": [
         {
           "end": 45,
@@ -989,8 +989,8 @@
           "shortName": "ListServerTlsPolicies"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_list_server_tls_policies_async.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_ListServerTlsPolicies_async",
+      "file": "networksecurity_v1beta1_generated_network_security_list_server_tls_policies_async.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListServerTlsPolicies_async",
       "segments": [
         {
           "end": 45,
@@ -1033,8 +1033,8 @@
           "shortName": "ListServerTlsPolicies"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_list_server_tls_policies_sync.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_ListServerTlsPolicies_sync",
+      "file": "networksecurity_v1beta1_generated_network_security_list_server_tls_policies_sync.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_ListServerTlsPolicies_sync",
       "segments": [
         {
           "end": 45,
@@ -1078,8 +1078,8 @@
           "shortName": "UpdateAuthorizationPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_update_authorization_policy_async.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_UpdateAuthorizationPolicy_async",
+      "file": "networksecurity_v1beta1_generated_network_security_update_authorization_policy_async.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateAuthorizationPolicy_async",
       "segments": [
         {
           "end": 52,
@@ -1122,8 +1122,8 @@
           "shortName": "UpdateAuthorizationPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_update_authorization_policy_sync.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_UpdateAuthorizationPolicy_sync",
+      "file": "networksecurity_v1beta1_generated_network_security_update_authorization_policy_sync.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateAuthorizationPolicy_sync",
       "segments": [
         {
           "end": 52,
@@ -1167,8 +1167,8 @@
           "shortName": "UpdateClientTlsPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_update_client_tls_policy_async.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_UpdateClientTlsPolicy_async",
+      "file": "networksecurity_v1beta1_generated_network_security_update_client_tls_policy_async.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateClientTlsPolicy_async",
       "segments": [
         {
           "end": 51,
@@ -1211,8 +1211,8 @@
           "shortName": "UpdateClientTlsPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_update_client_tls_policy_sync.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_UpdateClientTlsPolicy_sync",
+      "file": "networksecurity_v1beta1_generated_network_security_update_client_tls_policy_sync.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateClientTlsPolicy_sync",
       "segments": [
         {
           "end": 51,
@@ -1256,8 +1256,8 @@
           "shortName": "UpdateServerTlsPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_update_server_tls_policy_async.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_UpdateServerTlsPolicy_async",
+      "file": "networksecurity_v1beta1_generated_network_security_update_server_tls_policy_async.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateServerTlsPolicy_async",
       "segments": [
         {
           "end": 51,
@@ -1300,8 +1300,8 @@
           "shortName": "UpdateServerTlsPolicy"
         }
       },
-      "file": "networksecurity_generated_network_security_v1beta1_network_security_update_server_tls_policy_sync.py",
-      "regionTag": "networksecurity_generated_network_security_v1beta1_NetworkSecurity_UpdateServerTlsPolicy_sync",
+      "file": "networksecurity_v1beta1_generated_network_security_update_server_tls_policy_sync.py",
+      "regionTag": "networksecurity_v1beta1_generated_NetworkSecurity_UpdateServerTlsPolicy_sync",
       "segments": [
         {
           "end": 51,
