@@ -16,7 +16,7 @@
 from collections import OrderedDict
 import os
 import re
-from typing import Dict, Optional, Sequence, Tuple, Type, Union
+from typing import Dict, Mapping, Optional, Sequence, Tuple, Type, Union
 import pkg_resources
 
 from google.api_core import client_options as client_options_lib
@@ -508,7 +508,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+                    from google.cloud import network_security_v1beta1
 
             def sample_list_authorization_policies():
                 # Create a client
@@ -621,7 +621,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+                    from google.cloud import network_security_v1beta1
 
             def sample_get_authorization_policy():
                 # Create a client
@@ -728,7 +728,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+                    from google.cloud import network_security_v1beta1
 
             def sample_create_authorization_policy():
                 # Create a client
@@ -879,7 +879,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+                    from google.cloud import network_security_v1beta1
 
             def sample_update_authorization_policy():
                 # Create a client
@@ -1017,7 +1017,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+                    from google.cloud import network_security_v1beta1
 
             def sample_delete_authorization_policy():
                 # Create a client
@@ -1144,7 +1144,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+                    from google.cloud import network_security_v1beta1
 
             def sample_list_server_tls_policies():
                 # Create a client
@@ -1253,7 +1253,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+                    from google.cloud import network_security_v1beta1
 
             def sample_get_server_tls_policy():
                 # Create a client
@@ -1358,7 +1358,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+                    from google.cloud import network_security_v1beta1
 
             def sample_create_server_tls_policy():
                 # Create a client
@@ -1498,7 +1498,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+                    from google.cloud import network_security_v1beta1
 
             def sample_update_server_tls_policy():
                 # Create a client
@@ -1629,7 +1629,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+                    from google.cloud import network_security_v1beta1
 
             def sample_delete_server_tls_policy():
                 # Create a client
@@ -1752,7 +1752,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+                    from google.cloud import network_security_v1beta1
 
             def sample_list_client_tls_policies():
                 # Create a client
@@ -1861,7 +1861,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+                    from google.cloud import network_security_v1beta1
 
             def sample_get_client_tls_policy():
                 # Create a client
@@ -1965,7 +1965,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+                    from google.cloud import network_security_v1beta1
 
             def sample_create_client_tls_policy():
                 # Create a client
@@ -2104,7 +2104,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+                    from google.cloud import network_security_v1beta1
 
             def sample_update_client_tls_policy():
                 # Create a client
@@ -2234,7 +2234,7 @@ class NetworkSecurityClient(metaclass=NetworkSecurityClientMeta):
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+                    from google.cloud import network_security_v1beta1
 
             def sample_delete_client_tls_policy():
                 # Create a client
