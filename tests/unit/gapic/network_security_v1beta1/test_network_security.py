@@ -5334,7 +5334,6 @@ def test_network_security_transport_auth_adc(transport_class):
     [
         transports.NetworkSecurityGrpcTransport,
         transports.NetworkSecurityGrpcAsyncIOTransport,
-        transports.NetworkSecurityRestTransport,
     ],
 )
 def test_network_security_transport_auth_gdch_credentials(transport_class):
