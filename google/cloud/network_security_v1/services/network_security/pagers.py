@@ -24,7 +24,7 @@ from typing import (
     Tuple,
 )
 
-from google.cloud.networksecurity_v1.types import (
+from google.cloud.network_security_v1.types import (
     authorization_policy,
     client_tls_policy,
     server_tls_policy,
@@ -35,7 +35,7 @@ class ListAuthorizationPoliciesPager:
     """A pager for iterating through ``list_authorization_policies`` requests.
 
     This class thinly wraps an initial
-    :class:`google.cloud.networksecurity_v1.types.ListAuthorizationPoliciesResponse` object, and
+    :class:`google.cloud.network_security_v1.types.ListAuthorizationPoliciesResponse` object, and
     provides an ``__iter__`` method to iterate through its
     ``authorization_policies`` field.
 
@@ -44,7 +44,7 @@ class ListAuthorizationPoliciesPager:
     through the ``authorization_policies`` field on the
     corresponding responses.
 
-    All the usual :class:`google.cloud.networksecurity_v1.types.ListAuthorizationPoliciesResponse`
+    All the usual :class:`google.cloud.network_security_v1.types.ListAuthorizationPoliciesResponse`
     attributes are available on the pager. If multiple requests are made, only
     the most recent response is retained, and thus used for attribute lookup.
     """
@@ -62,9 +62,9 @@ class ListAuthorizationPoliciesPager:
         Args:
             method (Callable): The method that was originally called, and
                 which instantiated this pager.
-            request (google.cloud.networksecurity_v1.types.ListAuthorizationPoliciesRequest):
+            request (google.cloud.network_security_v1.types.ListAuthorizationPoliciesRequest):
                 The initial request object.
-            response (google.cloud.networksecurity_v1.types.ListAuthorizationPoliciesResponse):
+            response (google.cloud.network_security_v1.types.ListAuthorizationPoliciesResponse):
                 The initial response object.
             metadata (Sequence[Tuple[str, str]]): Strings which should be
                 sent along with the request as metadata.
@@ -97,7 +97,7 @@ class ListAuthorizationPoliciesAsyncPager:
     """A pager for iterating through ``list_authorization_policies`` requests.
 
     This class thinly wraps an initial
-    :class:`google.cloud.networksecurity_v1.types.ListAuthorizationPoliciesResponse` object, and
+    :class:`google.cloud.network_security_v1.types.ListAuthorizationPoliciesResponse` object, and
     provides an ``__aiter__`` method to iterate through its
     ``authorization_policies`` field.
 
@@ -106,7 +106,7 @@ class ListAuthorizationPoliciesAsyncPager:
     through the ``authorization_policies`` field on the
     corresponding responses.
 
-    All the usual :class:`google.cloud.networksecurity_v1.types.ListAuthorizationPoliciesResponse`
+    All the usual :class:`google.cloud.network_security_v1.types.ListAuthorizationPoliciesResponse`
     attributes are available on the pager. If multiple requests are made, only
     the most recent response is retained, and thus used for attribute lookup.
     """
@@ -126,9 +126,9 @@ class ListAuthorizationPoliciesAsyncPager:
         Args:
             method (Callable): The method that was originally called, and
                 which instantiated this pager.
-            request (google.cloud.networksecurity_v1.types.ListAuthorizationPoliciesRequest):
+            request (google.cloud.network_security_v1.types.ListAuthorizationPoliciesRequest):
                 The initial request object.
-            response (google.cloud.networksecurity_v1.types.ListAuthorizationPoliciesResponse):
+            response (google.cloud.network_security_v1.types.ListAuthorizationPoliciesResponse):
                 The initial response object.
             metadata (Sequence[Tuple[str, str]]): Strings which should be
                 sent along with the request as metadata.
@@ -167,7 +167,7 @@ class ListServerTlsPoliciesPager:
     """A pager for iterating through ``list_server_tls_policies`` requests.
 
     This class thinly wraps an initial
-    :class:`google.cloud.networksecurity_v1.types.ListServerTlsPoliciesResponse` object, and
+    :class:`google.cloud.network_security_v1.types.ListServerTlsPoliciesResponse` object, and
     provides an ``__iter__`` method to iterate through its
     ``server_tls_policies`` field.
 
@@ -176,7 +176,7 @@ class ListServerTlsPoliciesPager:
     through the ``server_tls_policies`` field on the
     corresponding responses.
 
-    All the usual :class:`google.cloud.networksecurity_v1.types.ListServerTlsPoliciesResponse`
+    All the usual :class:`google.cloud.network_security_v1.types.ListServerTlsPoliciesResponse`
     attributes are available on the pager. If multiple requests are made, only
     the most recent response is retained, and thus used for attribute lookup.
     """
@@ -194,9 +194,9 @@ class ListServerTlsPoliciesPager:
         Args:
             method (Callable): The method that was originally called, and
                 which instantiated this pager.
-            request (google.cloud.networksecurity_v1.types.ListServerTlsPoliciesRequest):
+            request (google.cloud.network_security_v1.types.ListServerTlsPoliciesRequest):
                 The initial request object.
-            response (google.cloud.networksecurity_v1.types.ListServerTlsPoliciesResponse):
+            response (google.cloud.network_security_v1.types.ListServerTlsPoliciesResponse):
                 The initial response object.
             metadata (Sequence[Tuple[str, str]]): Strings which should be
                 sent along with the request as metadata.
@@ -229,7 +229,7 @@ class ListServerTlsPoliciesAsyncPager:
     """A pager for iterating through ``list_server_tls_policies`` requests.
 
     This class thinly wraps an initial
-    :class:`google.cloud.networksecurity_v1.types.ListServerTlsPoliciesResponse` object, and
+    :class:`google.cloud.network_security_v1.types.ListServerTlsPoliciesResponse` object, and
     provides an ``__aiter__`` method to iterate through its
     ``server_tls_policies`` field.
 
@@ -238,7 +238,7 @@ class ListServerTlsPoliciesAsyncPager:
     through the ``server_tls_policies`` field on the
     corresponding responses.
 
-    All the usual :class:`google.cloud.networksecurity_v1.types.ListServerTlsPoliciesResponse`
+    All the usual :class:`google.cloud.network_security_v1.types.ListServerTlsPoliciesResponse`
     attributes are available on the pager. If multiple requests are made, only
     the most recent response is retained, and thus used for attribute lookup.
     """
@@ -258,9 +258,9 @@ class ListServerTlsPoliciesAsyncPager:
         Args:
             method (Callable): The method that was originally called, and
                 which instantiated this pager.
-            request (google.cloud.networksecurity_v1.types.ListServerTlsPoliciesRequest):
+            request (google.cloud.network_security_v1.types.ListServerTlsPoliciesRequest):
                 The initial request object.
-            response (google.cloud.networksecurity_v1.types.ListServerTlsPoliciesResponse):
+            response (google.cloud.network_security_v1.types.ListServerTlsPoliciesResponse):
                 The initial response object.
             metadata (Sequence[Tuple[str, str]]): Strings which should be
                 sent along with the request as metadata.
@@ -299,7 +299,7 @@ class ListClientTlsPoliciesPager:
     """A pager for iterating through ``list_client_tls_policies`` requests.
 
     This class thinly wraps an initial
-    :class:`google.cloud.networksecurity_v1.types.ListClientTlsPoliciesResponse` object, and
+    :class:`google.cloud.network_security_v1.types.ListClientTlsPoliciesResponse` object, and
     provides an ``__iter__`` method to iterate through its
     ``client_tls_policies`` field.
 
@@ -308,7 +308,7 @@ class ListClientTlsPoliciesPager:
     through the ``client_tls_policies`` field on the
     corresponding responses.
 
-    All the usual :class:`google.cloud.networksecurity_v1.types.ListClientTlsPoliciesResponse`
+    All the usual :class:`google.cloud.network_security_v1.types.ListClientTlsPoliciesResponse`
     attributes are available on the pager. If multiple requests are made, only
     the most recent response is retained, and thus used for attribute lookup.
     """
@@ -326,9 +326,9 @@ class ListClientTlsPoliciesPager:
         Args:
             method (Callable): The method that was originally called, and
                 which instantiated this pager.
-            request (google.cloud.networksecurity_v1.types.ListClientTlsPoliciesRequest):
+            request (google.cloud.network_security_v1.types.ListClientTlsPoliciesRequest):
                 The initial request object.
-            response (google.cloud.networksecurity_v1.types.ListClientTlsPoliciesResponse):
+            response (google.cloud.network_security_v1.types.ListClientTlsPoliciesResponse):
                 The initial response object.
             metadata (Sequence[Tuple[str, str]]): Strings which should be
                 sent along with the request as metadata.
@@ -361,7 +361,7 @@ class ListClientTlsPoliciesAsyncPager:
     """A pager for iterating through ``list_client_tls_policies`` requests.
 
     This class thinly wraps an initial
-    :class:`google.cloud.networksecurity_v1.types.ListClientTlsPoliciesResponse` object, and
+    :class:`google.cloud.network_security_v1.types.ListClientTlsPoliciesResponse` object, and
     provides an ``__aiter__`` method to iterate through its
     ``client_tls_policies`` field.
 
@@ -370,7 +370,7 @@ class ListClientTlsPoliciesAsyncPager:
     through the ``client_tls_policies`` field on the
     corresponding responses.
 
-    All the usual :class:`google.cloud.networksecurity_v1.types.ListClientTlsPoliciesResponse`
+    All the usual :class:`google.cloud.network_security_v1.types.ListClientTlsPoliciesResponse`
     attributes are available on the pager. If multiple requests are made, only
     the most recent response is retained, and thus used for attribute lookup.
     """
@@ -390,9 +390,9 @@ class ListClientTlsPoliciesAsyncPager:
         Args:
             method (Callable): The method that was originally called, and
                 which instantiated this pager.
-            request (google.cloud.networksecurity_v1.types.ListClientTlsPoliciesRequest):
+            request (google.cloud.network_security_v1.types.ListClientTlsPoliciesRequest):
                 The initial request object.
-            response (google.cloud.networksecurity_v1.types.ListClientTlsPoliciesResponse):
+            response (google.cloud.network_security_v1.types.ListClientTlsPoliciesResponse):
                 The initial response object.
             metadata (Sequence[Tuple[str, str]]): Strings which should be
                 sent along with the request as metadata.

@@ -23,18 +23,18 @@ from google.auth.transport.grpc import SslCredentials  # type: ignore
 from google.longrunning import operations_pb2  # type: ignore
 import grpc  # type: ignore
 
-from google.cloud.networksecurity_v1.types import (
+from google.cloud.network_security_v1.types import (
     authorization_policy as gcn_authorization_policy,
 )
-from google.cloud.networksecurity_v1.types import (
+from google.cloud.network_security_v1.types import (
     client_tls_policy as gcn_client_tls_policy,
 )
-from google.cloud.networksecurity_v1.types import (
+from google.cloud.network_security_v1.types import (
     server_tls_policy as gcn_server_tls_policy,
 )
-from google.cloud.networksecurity_v1.types import authorization_policy
-from google.cloud.networksecurity_v1.types import client_tls_policy
-from google.cloud.networksecurity_v1.types import server_tls_policy
+from google.cloud.network_security_v1.types import authorization_policy
+from google.cloud.network_security_v1.types import client_tls_policy
+from google.cloud.network_security_v1.types import server_tls_policy
 
 from .base import DEFAULT_CLIENT_INFO, NetworkSecurityTransport
 

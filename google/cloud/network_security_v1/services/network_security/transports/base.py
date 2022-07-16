@@ -26,23 +26,23 @@ from google.longrunning import operations_pb2  # type: ignore
 from google.oauth2 import service_account  # type: ignore
 import pkg_resources
 
-from google.cloud.networksecurity_v1.types import (
+from google.cloud.network_security_v1.types import (
     authorization_policy as gcn_authorization_policy,
 )
-from google.cloud.networksecurity_v1.types import (
+from google.cloud.network_security_v1.types import (
     client_tls_policy as gcn_client_tls_policy,
 )
-from google.cloud.networksecurity_v1.types import (
+from google.cloud.network_security_v1.types import (
     server_tls_policy as gcn_server_tls_policy,
 )
-from google.cloud.networksecurity_v1.types import authorization_policy
-from google.cloud.networksecurity_v1.types import client_tls_policy
-from google.cloud.networksecurity_v1.types import server_tls_policy
+from google.cloud.network_security_v1.types import authorization_policy
+from google.cloud.network_security_v1.types import client_tls_policy
+from google.cloud.network_security_v1.types import server_tls_policy
 
 try:
     DEFAULT_CLIENT_INFO = gapic_v1.client_info.ClientInfo(
         gapic_version=pkg_resources.get_distribution(
-            "google-cloud-networksecurity",
+            "google-cloud-network-security",
         ).version,
     )
 except pkg_resources.DistributionNotFound:

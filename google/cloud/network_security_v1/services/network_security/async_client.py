@@ -37,21 +37,21 @@ from google.protobuf import empty_pb2  # type: ignore
 from google.protobuf import field_mask_pb2  # type: ignore
 from google.protobuf import timestamp_pb2  # type: ignore
 
-from google.cloud.networksecurity_v1.services.network_security import pagers
-from google.cloud.networksecurity_v1.types import (
+from google.cloud.network_security_v1.services.network_security import pagers
+from google.cloud.network_security_v1.types import (
     authorization_policy as gcn_authorization_policy,
 )
-from google.cloud.networksecurity_v1.types import (
+from google.cloud.network_security_v1.types import (
     client_tls_policy as gcn_client_tls_policy,
 )
-from google.cloud.networksecurity_v1.types import (
+from google.cloud.network_security_v1.types import (
     server_tls_policy as gcn_server_tls_policy,
 )
-from google.cloud.networksecurity_v1.types import authorization_policy
-from google.cloud.networksecurity_v1.types import client_tls_policy
-from google.cloud.networksecurity_v1.types import common
-from google.cloud.networksecurity_v1.types import server_tls_policy
-from google.cloud.networksecurity_v1.types import tls
+from google.cloud.network_security_v1.types import authorization_policy
+from google.cloud.network_security_v1.types import client_tls_policy
+from google.cloud.network_security_v1.types import common
+from google.cloud.network_security_v1.types import server_tls_policy
+from google.cloud.network_security_v1.types import tls
 
 from .client import NetworkSecurityClient
 from .transports.base import DEFAULT_CLIENT_INFO, NetworkSecurityTransport
@@ -253,14 +253,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import networksecurity_v1
+            from google.cloud import network_security_v1
 
             async def sample_list_authorization_policies():
                 # Create a client
-                client = networksecurity_v1.NetworkSecurityAsyncClient()
+                client = network_security_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = networksecurity_v1.ListAuthorizationPoliciesRequest(
+                request = network_security_v1.ListAuthorizationPoliciesRequest(
                     parent="parent_value",
                 )
 
@@ -272,7 +272,7 @@ class NetworkSecurityAsyncClient:
                     print(response)
 
         Args:
-            request (Union[google.cloud.networksecurity_v1.types.ListAuthorizationPoliciesRequest, dict]):
+            request (Union[google.cloud.network_security_v1.types.ListAuthorizationPoliciesRequest, dict]):
                 The request object. Request used with the
                 ListAuthorizationPolicies method.
             parent (:class:`str`):
@@ -290,7 +290,7 @@ class NetworkSecurityAsyncClient:
                 sent along with the request as metadata.
 
         Returns:
-            google.cloud.networksecurity_v1.services.network_security.pagers.ListAuthorizationPoliciesAsyncPager:
+            google.cloud.network_security_v1.services.network_security.pagers.ListAuthorizationPoliciesAsyncPager:
                 Response returned by the
                 ListAuthorizationPolicies method.
                 Iterating over this object will yield
@@ -362,14 +362,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import networksecurity_v1
+            from google.cloud import network_security_v1
 
             async def sample_get_authorization_policy():
                 # Create a client
-                client = networksecurity_v1.NetworkSecurityAsyncClient()
+                client = network_security_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = networksecurity_v1.GetAuthorizationPolicyRequest(
+                request = network_security_v1.GetAuthorizationPolicyRequest(
                     name="name_value",
                 )
 
@@ -380,7 +380,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.networksecurity_v1.types.GetAuthorizationPolicyRequest, dict]):
+            request (Union[google.cloud.network_security_v1.types.GetAuthorizationPolicyRequest, dict]):
                 The request object. Request used by the
                 GetAuthorizationPolicy method.
             name (:class:`str`):
@@ -398,7 +398,7 @@ class NetworkSecurityAsyncClient:
                 sent along with the request as metadata.
 
         Returns:
-            google.cloud.networksecurity_v1.types.AuthorizationPolicy:
+            google.cloud.network_security_v1.types.AuthorizationPolicy:
                 AuthorizationPolicy is a resource
                 that specifies how a server should
                 authorize incoming connections. This
@@ -468,18 +468,18 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import networksecurity_v1
+            from google.cloud import network_security_v1
 
             async def sample_create_authorization_policy():
                 # Create a client
-                client = networksecurity_v1.NetworkSecurityAsyncClient()
+                client = network_security_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                authorization_policy = networksecurity_v1.AuthorizationPolicy()
+                authorization_policy = network_security_v1.AuthorizationPolicy()
                 authorization_policy.name = "name_value"
                 authorization_policy.action = "DENY"
 
-                request = networksecurity_v1.CreateAuthorizationPolicyRequest(
+                request = network_security_v1.CreateAuthorizationPolicyRequest(
                     parent="parent_value",
                     authorization_policy_id="authorization_policy_id_value",
                     authorization_policy=authorization_policy,
@@ -496,7 +496,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.networksecurity_v1.types.CreateAuthorizationPolicyRequest, dict]):
+            request (Union[google.cloud.network_security_v1.types.CreateAuthorizationPolicyRequest, dict]):
                 The request object. Request used by the
                 CreateAuthorizationPolicy method.
             parent (:class:`str`):
@@ -507,7 +507,7 @@ class NetworkSecurityAsyncClient:
                 This corresponds to the ``parent`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-            authorization_policy (:class:`google.cloud.networksecurity_v1.types.AuthorizationPolicy`):
+            authorization_policy (:class:`google.cloud.network_security_v1.types.AuthorizationPolicy`):
                 Required. AuthorizationPolicy
                 resource to be created.
 
@@ -534,7 +534,7 @@ class NetworkSecurityAsyncClient:
             google.api_core.operation_async.AsyncOperation:
                 An object representing a long-running operation.
 
-                The result type for the operation will be :class:`google.cloud.networksecurity_v1.types.AuthorizationPolicy` AuthorizationPolicy is a resource that specifies how a server
+                The result type for the operation will be :class:`google.cloud.network_security_v1.types.AuthorizationPolicy` AuthorizationPolicy is a resource that specifies how a server
                    should authorize incoming connections. This resource
                    in itself does not change the configuration unless
                    it's attached to a target https proxy or endpoint
@@ -614,18 +614,18 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import networksecurity_v1
+            from google.cloud import network_security_v1
 
             async def sample_update_authorization_policy():
                 # Create a client
-                client = networksecurity_v1.NetworkSecurityAsyncClient()
+                client = network_security_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                authorization_policy = networksecurity_v1.AuthorizationPolicy()
+                authorization_policy = network_security_v1.AuthorizationPolicy()
                 authorization_policy.name = "name_value"
                 authorization_policy.action = "DENY"
 
-                request = networksecurity_v1.UpdateAuthorizationPolicyRequest(
+                request = network_security_v1.UpdateAuthorizationPolicyRequest(
                     authorization_policy=authorization_policy,
                 )
 
@@ -640,10 +640,10 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.networksecurity_v1.types.UpdateAuthorizationPolicyRequest, dict]):
+            request (Union[google.cloud.network_security_v1.types.UpdateAuthorizationPolicyRequest, dict]):
                 The request object. Request used by the
                 UpdateAuthorizationPolicy method.
-            authorization_policy (:class:`google.cloud.networksecurity_v1.types.AuthorizationPolicy`):
+            authorization_policy (:class:`google.cloud.network_security_v1.types.AuthorizationPolicy`):
                 Required. Updated AuthorizationPolicy
                 resource.
 
@@ -672,7 +672,7 @@ class NetworkSecurityAsyncClient:
             google.api_core.operation_async.AsyncOperation:
                 An object representing a long-running operation.
 
-                The result type for the operation will be :class:`google.cloud.networksecurity_v1.types.AuthorizationPolicy` AuthorizationPolicy is a resource that specifies how a server
+                The result type for the operation will be :class:`google.cloud.network_security_v1.types.AuthorizationPolicy` AuthorizationPolicy is a resource that specifies how a server
                    should authorize incoming connections. This resource
                    in itself does not change the configuration unless
                    it's attached to a target https proxy or endpoint
@@ -748,14 +748,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import networksecurity_v1
+            from google.cloud import network_security_v1
 
             async def sample_delete_authorization_policy():
                 # Create a client
-                client = networksecurity_v1.NetworkSecurityAsyncClient()
+                client = network_security_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = networksecurity_v1.DeleteAuthorizationPolicyRequest(
+                request = network_security_v1.DeleteAuthorizationPolicyRequest(
                     name="name_value",
                 )
 
@@ -770,7 +770,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.networksecurity_v1.types.DeleteAuthorizationPolicyRequest, dict]):
+            request (Union[google.cloud.network_security_v1.types.DeleteAuthorizationPolicyRequest, dict]):
                 The request object. Request used by the
                 DeleteAuthorizationPolicy method.
             name (:class:`str`):
@@ -870,14 +870,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import networksecurity_v1
+            from google.cloud import network_security_v1
 
             async def sample_list_server_tls_policies():
                 # Create a client
-                client = networksecurity_v1.NetworkSecurityAsyncClient()
+                client = network_security_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = networksecurity_v1.ListServerTlsPoliciesRequest(
+                request = network_security_v1.ListServerTlsPoliciesRequest(
                     parent="parent_value",
                 )
 
@@ -889,7 +889,7 @@ class NetworkSecurityAsyncClient:
                     print(response)
 
         Args:
-            request (Union[google.cloud.networksecurity_v1.types.ListServerTlsPoliciesRequest, dict]):
+            request (Union[google.cloud.network_security_v1.types.ListServerTlsPoliciesRequest, dict]):
                 The request object. Request used by the
                 ListServerTlsPolicies method.
             parent (:class:`str`):
@@ -907,7 +907,7 @@ class NetworkSecurityAsyncClient:
                 sent along with the request as metadata.
 
         Returns:
-            google.cloud.networksecurity_v1.services.network_security.pagers.ListServerTlsPoliciesAsyncPager:
+            google.cloud.network_security_v1.services.network_security.pagers.ListServerTlsPoliciesAsyncPager:
                 Response returned by the
                 ListServerTlsPolicies method.
                 Iterating over this object will yield
@@ -979,14 +979,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import networksecurity_v1
+            from google.cloud import network_security_v1
 
             async def sample_get_server_tls_policy():
                 # Create a client
-                client = networksecurity_v1.NetworkSecurityAsyncClient()
+                client = network_security_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = networksecurity_v1.GetServerTlsPolicyRequest(
+                request = network_security_v1.GetServerTlsPolicyRequest(
                     name="name_value",
                 )
 
@@ -997,7 +997,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.networksecurity_v1.types.GetServerTlsPolicyRequest, dict]):
+            request (Union[google.cloud.network_security_v1.types.GetServerTlsPolicyRequest, dict]):
                 The request object. Request used by the
                 GetServerTlsPolicy method.
             name (:class:`str`):
@@ -1015,7 +1015,7 @@ class NetworkSecurityAsyncClient:
                 sent along with the request as metadata.
 
         Returns:
-            google.cloud.networksecurity_v1.types.ServerTlsPolicy:
+            google.cloud.network_security_v1.types.ServerTlsPolicy:
                 ServerTlsPolicy is a resource that
                 specifies how a server should
                 authenticate incoming requests. This
@@ -1083,17 +1083,17 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import networksecurity_v1
+            from google.cloud import network_security_v1
 
             async def sample_create_server_tls_policy():
                 # Create a client
-                client = networksecurity_v1.NetworkSecurityAsyncClient()
+                client = network_security_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                server_tls_policy = networksecurity_v1.ServerTlsPolicy()
+                server_tls_policy = network_security_v1.ServerTlsPolicy()
                 server_tls_policy.name = "name_value"
 
-                request = networksecurity_v1.CreateServerTlsPolicyRequest(
+                request = network_security_v1.CreateServerTlsPolicyRequest(
                     parent="parent_value",
                     server_tls_policy_id="server_tls_policy_id_value",
                     server_tls_policy=server_tls_policy,
@@ -1110,7 +1110,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.networksecurity_v1.types.CreateServerTlsPolicyRequest, dict]):
+            request (Union[google.cloud.network_security_v1.types.CreateServerTlsPolicyRequest, dict]):
                 The request object. Request used by the
                 CreateServerTlsPolicy method.
             parent (:class:`str`):
@@ -1121,7 +1121,7 @@ class NetworkSecurityAsyncClient:
                 This corresponds to the ``parent`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-            server_tls_policy (:class:`google.cloud.networksecurity_v1.types.ServerTlsPolicy`):
+            server_tls_policy (:class:`google.cloud.network_security_v1.types.ServerTlsPolicy`):
                 Required. ServerTlsPolicy resource to
                 be created.
 
@@ -1148,7 +1148,7 @@ class NetworkSecurityAsyncClient:
             google.api_core.operation_async.AsyncOperation:
                 An object representing a long-running operation.
 
-                The result type for the operation will be :class:`google.cloud.networksecurity_v1.types.ServerTlsPolicy` ServerTlsPolicy is a resource that specifies how a server should authenticate
+                The result type for the operation will be :class:`google.cloud.network_security_v1.types.ServerTlsPolicy` ServerTlsPolicy is a resource that specifies how a server should authenticate
                    incoming requests. This resource itself does not
                    affect configuration unless it is attached to a
                    target https proxy or endpoint config selector
@@ -1223,17 +1223,17 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import networksecurity_v1
+            from google.cloud import network_security_v1
 
             async def sample_update_server_tls_policy():
                 # Create a client
-                client = networksecurity_v1.NetworkSecurityAsyncClient()
+                client = network_security_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                server_tls_policy = networksecurity_v1.ServerTlsPolicy()
+                server_tls_policy = network_security_v1.ServerTlsPolicy()
                 server_tls_policy.name = "name_value"
 
-                request = networksecurity_v1.UpdateServerTlsPolicyRequest(
+                request = network_security_v1.UpdateServerTlsPolicyRequest(
                     server_tls_policy=server_tls_policy,
                 )
 
@@ -1248,10 +1248,10 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.networksecurity_v1.types.UpdateServerTlsPolicyRequest, dict]):
+            request (Union[google.cloud.network_security_v1.types.UpdateServerTlsPolicyRequest, dict]):
                 The request object. Request used by
                 UpdateServerTlsPolicy method.
-            server_tls_policy (:class:`google.cloud.networksecurity_v1.types.ServerTlsPolicy`):
+            server_tls_policy (:class:`google.cloud.network_security_v1.types.ServerTlsPolicy`):
                 Required. Updated ServerTlsPolicy
                 resource.
 
@@ -1280,7 +1280,7 @@ class NetworkSecurityAsyncClient:
             google.api_core.operation_async.AsyncOperation:
                 An object representing a long-running operation.
 
-                The result type for the operation will be :class:`google.cloud.networksecurity_v1.types.ServerTlsPolicy` ServerTlsPolicy is a resource that specifies how a server should authenticate
+                The result type for the operation will be :class:`google.cloud.network_security_v1.types.ServerTlsPolicy` ServerTlsPolicy is a resource that specifies how a server should authenticate
                    incoming requests. This resource itself does not
                    affect configuration unless it is attached to a
                    target https proxy or endpoint config selector
@@ -1354,14 +1354,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import networksecurity_v1
+            from google.cloud import network_security_v1
 
             async def sample_delete_server_tls_policy():
                 # Create a client
-                client = networksecurity_v1.NetworkSecurityAsyncClient()
+                client = network_security_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = networksecurity_v1.DeleteServerTlsPolicyRequest(
+                request = network_security_v1.DeleteServerTlsPolicyRequest(
                     name="name_value",
                 )
 
@@ -1376,7 +1376,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.networksecurity_v1.types.DeleteServerTlsPolicyRequest, dict]):
+            request (Union[google.cloud.network_security_v1.types.DeleteServerTlsPolicyRequest, dict]):
                 The request object. Request used by the
                 DeleteServerTlsPolicy method.
             name (:class:`str`):
@@ -1476,14 +1476,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import networksecurity_v1
+            from google.cloud import network_security_v1
 
             async def sample_list_client_tls_policies():
                 # Create a client
-                client = networksecurity_v1.NetworkSecurityAsyncClient()
+                client = network_security_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = networksecurity_v1.ListClientTlsPoliciesRequest(
+                request = network_security_v1.ListClientTlsPoliciesRequest(
                     parent="parent_value",
                 )
 
@@ -1495,7 +1495,7 @@ class NetworkSecurityAsyncClient:
                     print(response)
 
         Args:
-            request (Union[google.cloud.networksecurity_v1.types.ListClientTlsPoliciesRequest, dict]):
+            request (Union[google.cloud.network_security_v1.types.ListClientTlsPoliciesRequest, dict]):
                 The request object. Request used by the
                 ListClientTlsPolicies method.
             parent (:class:`str`):
@@ -1513,7 +1513,7 @@ class NetworkSecurityAsyncClient:
                 sent along with the request as metadata.
 
         Returns:
-            google.cloud.networksecurity_v1.services.network_security.pagers.ListClientTlsPoliciesAsyncPager:
+            google.cloud.network_security_v1.services.network_security.pagers.ListClientTlsPoliciesAsyncPager:
                 Response returned by the
                 ListClientTlsPolicies method.
                 Iterating over this object will yield
@@ -1585,14 +1585,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import networksecurity_v1
+            from google.cloud import network_security_v1
 
             async def sample_get_client_tls_policy():
                 # Create a client
-                client = networksecurity_v1.NetworkSecurityAsyncClient()
+                client = network_security_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = networksecurity_v1.GetClientTlsPolicyRequest(
+                request = network_security_v1.GetClientTlsPolicyRequest(
                     name="name_value",
                 )
 
@@ -1603,7 +1603,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.networksecurity_v1.types.GetClientTlsPolicyRequest, dict]):
+            request (Union[google.cloud.network_security_v1.types.GetClientTlsPolicyRequest, dict]):
                 The request object. Request used by the
                 GetClientTlsPolicy method.
             name (:class:`str`):
@@ -1621,7 +1621,7 @@ class NetworkSecurityAsyncClient:
                 sent along with the request as metadata.
 
         Returns:
-            google.cloud.networksecurity_v1.types.ClientTlsPolicy:
+            google.cloud.network_security_v1.types.ClientTlsPolicy:
                 ClientTlsPolicy is a resource that
                 specifies how a client should
                 authenticate connections to backends of
@@ -1688,17 +1688,17 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import networksecurity_v1
+            from google.cloud import network_security_v1
 
             async def sample_create_client_tls_policy():
                 # Create a client
-                client = networksecurity_v1.NetworkSecurityAsyncClient()
+                client = network_security_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                client_tls_policy = networksecurity_v1.ClientTlsPolicy()
+                client_tls_policy = network_security_v1.ClientTlsPolicy()
                 client_tls_policy.name = "name_value"
 
-                request = networksecurity_v1.CreateClientTlsPolicyRequest(
+                request = network_security_v1.CreateClientTlsPolicyRequest(
                     parent="parent_value",
                     client_tls_policy_id="client_tls_policy_id_value",
                     client_tls_policy=client_tls_policy,
@@ -1715,7 +1715,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.networksecurity_v1.types.CreateClientTlsPolicyRequest, dict]):
+            request (Union[google.cloud.network_security_v1.types.CreateClientTlsPolicyRequest, dict]):
                 The request object. Request used by the
                 CreateClientTlsPolicy method.
             parent (:class:`str`):
@@ -1726,7 +1726,7 @@ class NetworkSecurityAsyncClient:
                 This corresponds to the ``parent`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-            client_tls_policy (:class:`google.cloud.networksecurity_v1.types.ClientTlsPolicy`):
+            client_tls_policy (:class:`google.cloud.network_security_v1.types.ClientTlsPolicy`):
                 Required. ClientTlsPolicy resource to
                 be created.
 
@@ -1753,7 +1753,7 @@ class NetworkSecurityAsyncClient:
             google.api_core.operation_async.AsyncOperation:
                 An object representing a long-running operation.
 
-                The result type for the operation will be :class:`google.cloud.networksecurity_v1.types.ClientTlsPolicy` ClientTlsPolicy is a resource that specifies how a client should authenticate
+                The result type for the operation will be :class:`google.cloud.network_security_v1.types.ClientTlsPolicy` ClientTlsPolicy is a resource that specifies how a client should authenticate
                    connections to backends of a service. This resource
                    itself does not affect configuration unless it is
                    attached to a backend service resource.
@@ -1827,17 +1827,17 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import networksecurity_v1
+            from google.cloud import network_security_v1
 
             async def sample_update_client_tls_policy():
                 # Create a client
-                client = networksecurity_v1.NetworkSecurityAsyncClient()
+                client = network_security_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                client_tls_policy = networksecurity_v1.ClientTlsPolicy()
+                client_tls_policy = network_security_v1.ClientTlsPolicy()
                 client_tls_policy.name = "name_value"
 
-                request = networksecurity_v1.UpdateClientTlsPolicyRequest(
+                request = network_security_v1.UpdateClientTlsPolicyRequest(
                     client_tls_policy=client_tls_policy,
                 )
 
@@ -1852,10 +1852,10 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.networksecurity_v1.types.UpdateClientTlsPolicyRequest, dict]):
+            request (Union[google.cloud.network_security_v1.types.UpdateClientTlsPolicyRequest, dict]):
                 The request object. Request used by
                 UpdateClientTlsPolicy method.
-            client_tls_policy (:class:`google.cloud.networksecurity_v1.types.ClientTlsPolicy`):
+            client_tls_policy (:class:`google.cloud.network_security_v1.types.ClientTlsPolicy`):
                 Required. Updated ClientTlsPolicy
                 resource.
 
@@ -1884,7 +1884,7 @@ class NetworkSecurityAsyncClient:
             google.api_core.operation_async.AsyncOperation:
                 An object representing a long-running operation.
 
-                The result type for the operation will be :class:`google.cloud.networksecurity_v1.types.ClientTlsPolicy` ClientTlsPolicy is a resource that specifies how a client should authenticate
+                The result type for the operation will be :class:`google.cloud.network_security_v1.types.ClientTlsPolicy` ClientTlsPolicy is a resource that specifies how a client should authenticate
                    connections to backends of a service. This resource
                    itself does not affect configuration unless it is
                    attached to a backend service resource.
@@ -1957,14 +1957,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import networksecurity_v1
+            from google.cloud import network_security_v1
 
             async def sample_delete_client_tls_policy():
                 # Create a client
-                client = networksecurity_v1.NetworkSecurityAsyncClient()
+                client = network_security_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = networksecurity_v1.DeleteClientTlsPolicyRequest(
+                request = network_security_v1.DeleteClientTlsPolicyRequest(
                     name="name_value",
                 )
 
@@ -1979,7 +1979,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.networksecurity_v1.types.DeleteClientTlsPolicyRequest, dict]):
+            request (Union[google.cloud.network_security_v1.types.DeleteClientTlsPolicyRequest, dict]):
                 The request object. Request used by the
                 DeleteClientTlsPolicy method.
             name (:class:`str`):
@@ -2075,7 +2075,7 @@ class NetworkSecurityAsyncClient:
 try:
     DEFAULT_CLIENT_INFO = gapic_v1.client_info.ClientInfo(
         gapic_version=pkg_resources.get_distribution(
-            "google-cloud-networksecurity",
+            "google-cloud-network-security",
         ).version,
     )
 except pkg_resources.DistributionNotFound:

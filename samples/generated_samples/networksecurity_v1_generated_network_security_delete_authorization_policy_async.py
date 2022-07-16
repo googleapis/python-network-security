@@ -20,19 +20,19 @@
 # It may require modifications to work in your environment.
 
 # To install the latest published package dependency, execute the following:
-#   python3 -m pip install google-cloud-networksecurity
+#   python3 -m pip install google-cloud-network-security
 
 
 # [START networksecurity_v1_generated_NetworkSecurity_DeleteAuthorizationPolicy_async]
-from google.cloud import networksecurity_v1
+from google.cloud import network_security_v1
 
 
 async def sample_delete_authorization_policy():
     # Create a client
-    client = networksecurity_v1.NetworkSecurityAsyncClient()
+    client = network_security_v1.NetworkSecurityAsyncClient()
 
     # Initialize request argument(s)
-    request = networksecurity_v1.DeleteAuthorizationPolicyRequest(
+    request = network_security_v1.DeleteAuthorizationPolicyRequest(
         name="name_value",
     )
 

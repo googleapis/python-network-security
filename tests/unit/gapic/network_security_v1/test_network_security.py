@@ -48,26 +48,26 @@ from grpc.experimental import aio
 from proto.marshal.rules.dates import DurationRule, TimestampRule
 import pytest
 
-from google.cloud.networksecurity_v1.services.network_security import (
+from google.cloud.network_security_v1.services.network_security import (
     NetworkSecurityAsyncClient,
     NetworkSecurityClient,
     pagers,
     transports,
 )
-from google.cloud.networksecurity_v1.types import (
+from google.cloud.network_security_v1.types import (
     authorization_policy as gcn_authorization_policy,
 )
-from google.cloud.networksecurity_v1.types import (
+from google.cloud.network_security_v1.types import (
     client_tls_policy as gcn_client_tls_policy,
 )
-from google.cloud.networksecurity_v1.types import (
+from google.cloud.network_security_v1.types import (
     server_tls_policy as gcn_server_tls_policy,
 )
-from google.cloud.networksecurity_v1.types import authorization_policy
-from google.cloud.networksecurity_v1.types import client_tls_policy
-from google.cloud.networksecurity_v1.types import common
-from google.cloud.networksecurity_v1.types import server_tls_policy
-from google.cloud.networksecurity_v1.types import tls
+from google.cloud.network_security_v1.types import authorization_policy
+from google.cloud.network_security_v1.types import client_tls_policy
+from google.cloud.network_security_v1.types import common
+from google.cloud.network_security_v1.types import server_tls_policy
+from google.cloud.network_security_v1.types import tls
 
 
 def client_cert_source_callback():
@@ -632,7 +632,7 @@ def test_network_security_client_client_options_credentials_file(
 
 def test_network_security_client_client_options_from_dict():
     with mock.patch(
-        "google.cloud.networksecurity_v1.services.network_security.transports.NetworkSecurityGrpcTransport.__init__"
+        "google.cloud.network_security_v1.services.network_security.transports.NetworkSecurityGrpcTransport.__init__"
     ) as grpc_transport:
         grpc_transport.return_value = None
         client = NetworkSecurityClient(
@@ -5218,7 +5218,7 @@ def test_network_security_base_transport_error():
 def test_network_security_base_transport():
     # Instantiate the base transport.
     with mock.patch(
-        "google.cloud.networksecurity_v1.services.network_security.transports.NetworkSecurityTransport.__init__"
+        "google.cloud.network_security_v1.services.network_security.transports.NetworkSecurityTransport.__init__"
     ) as Transport:
         Transport.return_value = None
         transport = transports.NetworkSecurityTransport(
@@ -5270,7 +5270,7 @@ def test_network_security_base_transport_with_credentials_file():
     with mock.patch.object(
         google.auth, "load_credentials_from_file", autospec=True
     ) as load_creds, mock.patch(
-        "google.cloud.networksecurity_v1.services.network_security.transports.NetworkSecurityTransport._prep_wrapped_messages"
+        "google.cloud.network_security_v1.services.network_security.transports.NetworkSecurityTransport._prep_wrapped_messages"
     ) as Transport:
         Transport.return_value = None
         load_creds.return_value = (ga_credentials.AnonymousCredentials(), None)
@@ -5289,7 +5289,7 @@ def test_network_security_base_transport_with_credentials_file():
 def test_network_security_base_transport_with_adc():
     # Test the default credentials are used if credentials and credentials_file are None.
     with mock.patch.object(google.auth, "default", autospec=True) as adc, mock.patch(
-        "google.cloud.networksecurity_v1.services.network_security.transports.NetworkSecurityTransport._prep_wrapped_messages"
+        "google.cloud.network_security_v1.services.network_security.transports.NetworkSecurityTransport._prep_wrapped_messages"
     ) as Transport:
         Transport.return_value = None
         adc.return_value = (ga_credentials.AnonymousCredentials(), None)

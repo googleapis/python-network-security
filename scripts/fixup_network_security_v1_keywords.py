@@ -36,7 +36,7 @@ def partition(
     return results[1], results[0]
 
 
-class networksecurityCallTransformer(cst.CSTTransformer):
+class network_securityCallTransformer(cst.CSTTransformer):
     CTRL_PARAMS: Tuple[str] = ('retry', 'timeout', 'metadata')
     METHOD_TO_PARAMS: Dict[str, Tuple[str]] = {
         'create_authorization_policy': ('parent', 'authorization_policy_id', 'authorization_policy', ),
@@ -102,7 +102,7 @@ def fix_files(
     in_dir: pathlib.Path,
     out_dir: pathlib.Path,
     *,
-    transformer=networksecurityCallTransformer(),
+    transformer=network_securityCallTransformer(),
 ):
     """Duplicate the input dir to the output dir, fixing file method calls.
 
@@ -135,7 +135,7 @@ def fix_files(
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
-        description="""Fix up source that uses the networksecurity client library.
+        description="""Fix up source that uses the network_security client library.
 
 The existing sources are NOT overwritten but are copied to output_dir with changes made.
 
