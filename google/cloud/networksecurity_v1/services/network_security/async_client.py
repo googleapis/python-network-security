@@ -33,29 +33,25 @@ except AttributeError:  # pragma: NO COVER
 
 from google.api_core import operation  # type: ignore
 from google.api_core import operation_async  # type: ignore
-from google.cloud.location import locations_pb2  # type: ignore
-from google.iam.v1 import iam_policy_pb2  # type: ignore
-from google.iam.v1 import policy_pb2  # type: ignore
-from google.longrunning import operations_pb2
 from google.protobuf import empty_pb2  # type: ignore
 from google.protobuf import field_mask_pb2  # type: ignore
 from google.protobuf import timestamp_pb2  # type: ignore
 
-from google.cloud.network_security_v1beta1.services.network_security import pagers
-from google.cloud.network_security_v1beta1.types import (
+from google.cloud.networksecurity_v1.services.network_security import pagers
+from google.cloud.networksecurity_v1.types import (
     authorization_policy as gcn_authorization_policy,
 )
-from google.cloud.network_security_v1beta1.types import (
+from google.cloud.networksecurity_v1.types import (
     client_tls_policy as gcn_client_tls_policy,
 )
-from google.cloud.network_security_v1beta1.types import (
+from google.cloud.networksecurity_v1.types import (
     server_tls_policy as gcn_server_tls_policy,
 )
-from google.cloud.network_security_v1beta1.types import authorization_policy
-from google.cloud.network_security_v1beta1.types import client_tls_policy
-from google.cloud.network_security_v1beta1.types import common
-from google.cloud.network_security_v1beta1.types import server_tls_policy
-from google.cloud.network_security_v1beta1.types import tls
+from google.cloud.networksecurity_v1.types import authorization_policy
+from google.cloud.networksecurity_v1.types import client_tls_policy
+from google.cloud.networksecurity_v1.types import common
+from google.cloud.networksecurity_v1.types import server_tls_policy
+from google.cloud.networksecurity_v1.types import tls
 
 from .client import NetworkSecurityClient
 from .transports.base import DEFAULT_CLIENT_INFO, NetworkSecurityTransport
@@ -257,14 +253,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+            from google.cloud import networksecurity_v1
 
             async def sample_list_authorization_policies():
                 # Create a client
-                client = network_security_v1beta1.NetworkSecurityAsyncClient()
+                client = networksecurity_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = network_security_v1beta1.ListAuthorizationPoliciesRequest(
+                request = networksecurity_v1.ListAuthorizationPoliciesRequest(
                     parent="parent_value",
                 )
 
@@ -276,7 +272,7 @@ class NetworkSecurityAsyncClient:
                     print(response)
 
         Args:
-            request (Union[google.cloud.network_security_v1beta1.types.ListAuthorizationPoliciesRequest, dict]):
+            request (Union[google.cloud.networksecurity_v1.types.ListAuthorizationPoliciesRequest, dict]):
                 The request object. Request used with the
                 ListAuthorizationPolicies method.
             parent (:class:`str`):
@@ -294,7 +290,7 @@ class NetworkSecurityAsyncClient:
                 sent along with the request as metadata.
 
         Returns:
-            google.cloud.network_security_v1beta1.services.network_security.pagers.ListAuthorizationPoliciesAsyncPager:
+            google.cloud.networksecurity_v1.services.network_security.pagers.ListAuthorizationPoliciesAsyncPager:
                 Response returned by the
                 ListAuthorizationPolicies method.
                 Iterating over this object will yield
@@ -366,14 +362,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+            from google.cloud import networksecurity_v1
 
             async def sample_get_authorization_policy():
                 # Create a client
-                client = network_security_v1beta1.NetworkSecurityAsyncClient()
+                client = networksecurity_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = network_security_v1beta1.GetAuthorizationPolicyRequest(
+                request = networksecurity_v1.GetAuthorizationPolicyRequest(
                     name="name_value",
                 )
 
@@ -384,7 +380,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.network_security_v1beta1.types.GetAuthorizationPolicyRequest, dict]):
+            request (Union[google.cloud.networksecurity_v1.types.GetAuthorizationPolicyRequest, dict]):
                 The request object. Request used by the
                 GetAuthorizationPolicy method.
             name (:class:`str`):
@@ -402,7 +398,7 @@ class NetworkSecurityAsyncClient:
                 sent along with the request as metadata.
 
         Returns:
-            google.cloud.network_security_v1beta1.types.AuthorizationPolicy:
+            google.cloud.networksecurity_v1.types.AuthorizationPolicy:
                 AuthorizationPolicy is a resource
                 that specifies how a server should
                 authorize incoming connections. This
@@ -472,18 +468,18 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+            from google.cloud import networksecurity_v1
 
             async def sample_create_authorization_policy():
                 # Create a client
-                client = network_security_v1beta1.NetworkSecurityAsyncClient()
+                client = networksecurity_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                authorization_policy = network_security_v1beta1.AuthorizationPolicy()
+                authorization_policy = networksecurity_v1.AuthorizationPolicy()
                 authorization_policy.name = "name_value"
                 authorization_policy.action = "DENY"
 
-                request = network_security_v1beta1.CreateAuthorizationPolicyRequest(
+                request = networksecurity_v1.CreateAuthorizationPolicyRequest(
                     parent="parent_value",
                     authorization_policy_id="authorization_policy_id_value",
                     authorization_policy=authorization_policy,
@@ -500,7 +496,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.network_security_v1beta1.types.CreateAuthorizationPolicyRequest, dict]):
+            request (Union[google.cloud.networksecurity_v1.types.CreateAuthorizationPolicyRequest, dict]):
                 The request object. Request used by the
                 CreateAuthorizationPolicy method.
             parent (:class:`str`):
@@ -511,7 +507,7 @@ class NetworkSecurityAsyncClient:
                 This corresponds to the ``parent`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-            authorization_policy (:class:`google.cloud.network_security_v1beta1.types.AuthorizationPolicy`):
+            authorization_policy (:class:`google.cloud.networksecurity_v1.types.AuthorizationPolicy`):
                 Required. AuthorizationPolicy
                 resource to be created.
 
@@ -538,7 +534,7 @@ class NetworkSecurityAsyncClient:
             google.api_core.operation_async.AsyncOperation:
                 An object representing a long-running operation.
 
-                The result type for the operation will be :class:`google.cloud.network_security_v1beta1.types.AuthorizationPolicy` AuthorizationPolicy is a resource that specifies how a server
+                The result type for the operation will be :class:`google.cloud.networksecurity_v1.types.AuthorizationPolicy` AuthorizationPolicy is a resource that specifies how a server
                    should authorize incoming connections. This resource
                    in itself does not change the configuration unless
                    it's attached to a target https proxy or endpoint
@@ -618,18 +614,18 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+            from google.cloud import networksecurity_v1
 
             async def sample_update_authorization_policy():
                 # Create a client
-                client = network_security_v1beta1.NetworkSecurityAsyncClient()
+                client = networksecurity_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                authorization_policy = network_security_v1beta1.AuthorizationPolicy()
+                authorization_policy = networksecurity_v1.AuthorizationPolicy()
                 authorization_policy.name = "name_value"
                 authorization_policy.action = "DENY"
 
-                request = network_security_v1beta1.UpdateAuthorizationPolicyRequest(
+                request = networksecurity_v1.UpdateAuthorizationPolicyRequest(
                     authorization_policy=authorization_policy,
                 )
 
@@ -644,10 +640,10 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.network_security_v1beta1.types.UpdateAuthorizationPolicyRequest, dict]):
+            request (Union[google.cloud.networksecurity_v1.types.UpdateAuthorizationPolicyRequest, dict]):
                 The request object. Request used by the
                 UpdateAuthorizationPolicy method.
-            authorization_policy (:class:`google.cloud.network_security_v1beta1.types.AuthorizationPolicy`):
+            authorization_policy (:class:`google.cloud.networksecurity_v1.types.AuthorizationPolicy`):
                 Required. Updated AuthorizationPolicy
                 resource.
 
@@ -676,7 +672,7 @@ class NetworkSecurityAsyncClient:
             google.api_core.operation_async.AsyncOperation:
                 An object representing a long-running operation.
 
-                The result type for the operation will be :class:`google.cloud.network_security_v1beta1.types.AuthorizationPolicy` AuthorizationPolicy is a resource that specifies how a server
+                The result type for the operation will be :class:`google.cloud.networksecurity_v1.types.AuthorizationPolicy` AuthorizationPolicy is a resource that specifies how a server
                    should authorize incoming connections. This resource
                    in itself does not change the configuration unless
                    it's attached to a target https proxy or endpoint
@@ -752,14 +748,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+            from google.cloud import networksecurity_v1
 
             async def sample_delete_authorization_policy():
                 # Create a client
-                client = network_security_v1beta1.NetworkSecurityAsyncClient()
+                client = networksecurity_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = network_security_v1beta1.DeleteAuthorizationPolicyRequest(
+                request = networksecurity_v1.DeleteAuthorizationPolicyRequest(
                     name="name_value",
                 )
 
@@ -774,7 +770,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.network_security_v1beta1.types.DeleteAuthorizationPolicyRequest, dict]):
+            request (Union[google.cloud.networksecurity_v1.types.DeleteAuthorizationPolicyRequest, dict]):
                 The request object. Request used by the
                 DeleteAuthorizationPolicy method.
             name (:class:`str`):
@@ -874,14 +870,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+            from google.cloud import networksecurity_v1
 
             async def sample_list_server_tls_policies():
                 # Create a client
-                client = network_security_v1beta1.NetworkSecurityAsyncClient()
+                client = networksecurity_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = network_security_v1beta1.ListServerTlsPoliciesRequest(
+                request = networksecurity_v1.ListServerTlsPoliciesRequest(
                     parent="parent_value",
                 )
 
@@ -893,7 +889,7 @@ class NetworkSecurityAsyncClient:
                     print(response)
 
         Args:
-            request (Union[google.cloud.network_security_v1beta1.types.ListServerTlsPoliciesRequest, dict]):
+            request (Union[google.cloud.networksecurity_v1.types.ListServerTlsPoliciesRequest, dict]):
                 The request object. Request used by the
                 ListServerTlsPolicies method.
             parent (:class:`str`):
@@ -911,7 +907,7 @@ class NetworkSecurityAsyncClient:
                 sent along with the request as metadata.
 
         Returns:
-            google.cloud.network_security_v1beta1.services.network_security.pagers.ListServerTlsPoliciesAsyncPager:
+            google.cloud.networksecurity_v1.services.network_security.pagers.ListServerTlsPoliciesAsyncPager:
                 Response returned by the
                 ListServerTlsPolicies method.
                 Iterating over this object will yield
@@ -983,14 +979,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+            from google.cloud import networksecurity_v1
 
             async def sample_get_server_tls_policy():
                 # Create a client
-                client = network_security_v1beta1.NetworkSecurityAsyncClient()
+                client = networksecurity_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = network_security_v1beta1.GetServerTlsPolicyRequest(
+                request = networksecurity_v1.GetServerTlsPolicyRequest(
                     name="name_value",
                 )
 
@@ -1001,7 +997,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.network_security_v1beta1.types.GetServerTlsPolicyRequest, dict]):
+            request (Union[google.cloud.networksecurity_v1.types.GetServerTlsPolicyRequest, dict]):
                 The request object. Request used by the
                 GetServerTlsPolicy method.
             name (:class:`str`):
@@ -1019,7 +1015,7 @@ class NetworkSecurityAsyncClient:
                 sent along with the request as metadata.
 
         Returns:
-            google.cloud.network_security_v1beta1.types.ServerTlsPolicy:
+            google.cloud.networksecurity_v1.types.ServerTlsPolicy:
                 ServerTlsPolicy is a resource that
                 specifies how a server should
                 authenticate incoming requests. This
@@ -1087,17 +1083,17 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+            from google.cloud import networksecurity_v1
 
             async def sample_create_server_tls_policy():
                 # Create a client
-                client = network_security_v1beta1.NetworkSecurityAsyncClient()
+                client = networksecurity_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                server_tls_policy = network_security_v1beta1.ServerTlsPolicy()
+                server_tls_policy = networksecurity_v1.ServerTlsPolicy()
                 server_tls_policy.name = "name_value"
 
-                request = network_security_v1beta1.CreateServerTlsPolicyRequest(
+                request = networksecurity_v1.CreateServerTlsPolicyRequest(
                     parent="parent_value",
                     server_tls_policy_id="server_tls_policy_id_value",
                     server_tls_policy=server_tls_policy,
@@ -1114,7 +1110,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.network_security_v1beta1.types.CreateServerTlsPolicyRequest, dict]):
+            request (Union[google.cloud.networksecurity_v1.types.CreateServerTlsPolicyRequest, dict]):
                 The request object. Request used by the
                 CreateServerTlsPolicy method.
             parent (:class:`str`):
@@ -1125,7 +1121,7 @@ class NetworkSecurityAsyncClient:
                 This corresponds to the ``parent`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-            server_tls_policy (:class:`google.cloud.network_security_v1beta1.types.ServerTlsPolicy`):
+            server_tls_policy (:class:`google.cloud.networksecurity_v1.types.ServerTlsPolicy`):
                 Required. ServerTlsPolicy resource to
                 be created.
 
@@ -1152,7 +1148,7 @@ class NetworkSecurityAsyncClient:
             google.api_core.operation_async.AsyncOperation:
                 An object representing a long-running operation.
 
-                The result type for the operation will be :class:`google.cloud.network_security_v1beta1.types.ServerTlsPolicy` ServerTlsPolicy is a resource that specifies how a server should authenticate
+                The result type for the operation will be :class:`google.cloud.networksecurity_v1.types.ServerTlsPolicy` ServerTlsPolicy is a resource that specifies how a server should authenticate
                    incoming requests. This resource itself does not
                    affect configuration unless it is attached to a
                    target https proxy or endpoint config selector
@@ -1227,17 +1223,17 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+            from google.cloud import networksecurity_v1
 
             async def sample_update_server_tls_policy():
                 # Create a client
-                client = network_security_v1beta1.NetworkSecurityAsyncClient()
+                client = networksecurity_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                server_tls_policy = network_security_v1beta1.ServerTlsPolicy()
+                server_tls_policy = networksecurity_v1.ServerTlsPolicy()
                 server_tls_policy.name = "name_value"
 
-                request = network_security_v1beta1.UpdateServerTlsPolicyRequest(
+                request = networksecurity_v1.UpdateServerTlsPolicyRequest(
                     server_tls_policy=server_tls_policy,
                 )
 
@@ -1252,10 +1248,10 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.network_security_v1beta1.types.UpdateServerTlsPolicyRequest, dict]):
+            request (Union[google.cloud.networksecurity_v1.types.UpdateServerTlsPolicyRequest, dict]):
                 The request object. Request used by
                 UpdateServerTlsPolicy method.
-            server_tls_policy (:class:`google.cloud.network_security_v1beta1.types.ServerTlsPolicy`):
+            server_tls_policy (:class:`google.cloud.networksecurity_v1.types.ServerTlsPolicy`):
                 Required. Updated ServerTlsPolicy
                 resource.
 
@@ -1284,7 +1280,7 @@ class NetworkSecurityAsyncClient:
             google.api_core.operation_async.AsyncOperation:
                 An object representing a long-running operation.
 
-                The result type for the operation will be :class:`google.cloud.network_security_v1beta1.types.ServerTlsPolicy` ServerTlsPolicy is a resource that specifies how a server should authenticate
+                The result type for the operation will be :class:`google.cloud.networksecurity_v1.types.ServerTlsPolicy` ServerTlsPolicy is a resource that specifies how a server should authenticate
                    incoming requests. This resource itself does not
                    affect configuration unless it is attached to a
                    target https proxy or endpoint config selector
@@ -1358,14 +1354,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+            from google.cloud import networksecurity_v1
 
             async def sample_delete_server_tls_policy():
                 # Create a client
-                client = network_security_v1beta1.NetworkSecurityAsyncClient()
+                client = networksecurity_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = network_security_v1beta1.DeleteServerTlsPolicyRequest(
+                request = networksecurity_v1.DeleteServerTlsPolicyRequest(
                     name="name_value",
                 )
 
@@ -1380,7 +1376,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.network_security_v1beta1.types.DeleteServerTlsPolicyRequest, dict]):
+            request (Union[google.cloud.networksecurity_v1.types.DeleteServerTlsPolicyRequest, dict]):
                 The request object. Request used by the
                 DeleteServerTlsPolicy method.
             name (:class:`str`):
@@ -1480,14 +1476,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+            from google.cloud import networksecurity_v1
 
             async def sample_list_client_tls_policies():
                 # Create a client
-                client = network_security_v1beta1.NetworkSecurityAsyncClient()
+                client = networksecurity_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = network_security_v1beta1.ListClientTlsPoliciesRequest(
+                request = networksecurity_v1.ListClientTlsPoliciesRequest(
                     parent="parent_value",
                 )
 
@@ -1499,7 +1495,7 @@ class NetworkSecurityAsyncClient:
                     print(response)
 
         Args:
-            request (Union[google.cloud.network_security_v1beta1.types.ListClientTlsPoliciesRequest, dict]):
+            request (Union[google.cloud.networksecurity_v1.types.ListClientTlsPoliciesRequest, dict]):
                 The request object. Request used by the
                 ListClientTlsPolicies method.
             parent (:class:`str`):
@@ -1517,7 +1513,7 @@ class NetworkSecurityAsyncClient:
                 sent along with the request as metadata.
 
         Returns:
-            google.cloud.network_security_v1beta1.services.network_security.pagers.ListClientTlsPoliciesAsyncPager:
+            google.cloud.networksecurity_v1.services.network_security.pagers.ListClientTlsPoliciesAsyncPager:
                 Response returned by the
                 ListClientTlsPolicies method.
                 Iterating over this object will yield
@@ -1589,14 +1585,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+            from google.cloud import networksecurity_v1
 
             async def sample_get_client_tls_policy():
                 # Create a client
-                client = network_security_v1beta1.NetworkSecurityAsyncClient()
+                client = networksecurity_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = network_security_v1beta1.GetClientTlsPolicyRequest(
+                request = networksecurity_v1.GetClientTlsPolicyRequest(
                     name="name_value",
                 )
 
@@ -1607,7 +1603,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.network_security_v1beta1.types.GetClientTlsPolicyRequest, dict]):
+            request (Union[google.cloud.networksecurity_v1.types.GetClientTlsPolicyRequest, dict]):
                 The request object. Request used by the
                 GetClientTlsPolicy method.
             name (:class:`str`):
@@ -1625,7 +1621,7 @@ class NetworkSecurityAsyncClient:
                 sent along with the request as metadata.
 
         Returns:
-            google.cloud.network_security_v1beta1.types.ClientTlsPolicy:
+            google.cloud.networksecurity_v1.types.ClientTlsPolicy:
                 ClientTlsPolicy is a resource that
                 specifies how a client should
                 authenticate connections to backends of
@@ -1692,17 +1688,17 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+            from google.cloud import networksecurity_v1
 
             async def sample_create_client_tls_policy():
                 # Create a client
-                client = network_security_v1beta1.NetworkSecurityAsyncClient()
+                client = networksecurity_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                client_tls_policy = network_security_v1beta1.ClientTlsPolicy()
+                client_tls_policy = networksecurity_v1.ClientTlsPolicy()
                 client_tls_policy.name = "name_value"
 
-                request = network_security_v1beta1.CreateClientTlsPolicyRequest(
+                request = networksecurity_v1.CreateClientTlsPolicyRequest(
                     parent="parent_value",
                     client_tls_policy_id="client_tls_policy_id_value",
                     client_tls_policy=client_tls_policy,
@@ -1719,7 +1715,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.network_security_v1beta1.types.CreateClientTlsPolicyRequest, dict]):
+            request (Union[google.cloud.networksecurity_v1.types.CreateClientTlsPolicyRequest, dict]):
                 The request object. Request used by the
                 CreateClientTlsPolicy method.
             parent (:class:`str`):
@@ -1730,7 +1726,7 @@ class NetworkSecurityAsyncClient:
                 This corresponds to the ``parent`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-            client_tls_policy (:class:`google.cloud.network_security_v1beta1.types.ClientTlsPolicy`):
+            client_tls_policy (:class:`google.cloud.networksecurity_v1.types.ClientTlsPolicy`):
                 Required. ClientTlsPolicy resource to
                 be created.
 
@@ -1757,7 +1753,7 @@ class NetworkSecurityAsyncClient:
             google.api_core.operation_async.AsyncOperation:
                 An object representing a long-running operation.
 
-                The result type for the operation will be :class:`google.cloud.network_security_v1beta1.types.ClientTlsPolicy` ClientTlsPolicy is a resource that specifies how a client should authenticate
+                The result type for the operation will be :class:`google.cloud.networksecurity_v1.types.ClientTlsPolicy` ClientTlsPolicy is a resource that specifies how a client should authenticate
                    connections to backends of a service. This resource
                    itself does not affect configuration unless it is
                    attached to a backend service resource.
@@ -1831,17 +1827,17 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+            from google.cloud import networksecurity_v1
 
             async def sample_update_client_tls_policy():
                 # Create a client
-                client = network_security_v1beta1.NetworkSecurityAsyncClient()
+                client = networksecurity_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                client_tls_policy = network_security_v1beta1.ClientTlsPolicy()
+                client_tls_policy = networksecurity_v1.ClientTlsPolicy()
                 client_tls_policy.name = "name_value"
 
-                request = network_security_v1beta1.UpdateClientTlsPolicyRequest(
+                request = networksecurity_v1.UpdateClientTlsPolicyRequest(
                     client_tls_policy=client_tls_policy,
                 )
 
@@ -1856,10 +1852,10 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.network_security_v1beta1.types.UpdateClientTlsPolicyRequest, dict]):
+            request (Union[google.cloud.networksecurity_v1.types.UpdateClientTlsPolicyRequest, dict]):
                 The request object. Request used by
                 UpdateClientTlsPolicy method.
-            client_tls_policy (:class:`google.cloud.network_security_v1beta1.types.ClientTlsPolicy`):
+            client_tls_policy (:class:`google.cloud.networksecurity_v1.types.ClientTlsPolicy`):
                 Required. Updated ClientTlsPolicy
                 resource.
 
@@ -1888,7 +1884,7 @@ class NetworkSecurityAsyncClient:
             google.api_core.operation_async.AsyncOperation:
                 An object representing a long-running operation.
 
-                The result type for the operation will be :class:`google.cloud.network_security_v1beta1.types.ClientTlsPolicy` ClientTlsPolicy is a resource that specifies how a client should authenticate
+                The result type for the operation will be :class:`google.cloud.networksecurity_v1.types.ClientTlsPolicy` ClientTlsPolicy is a resource that specifies how a client should authenticate
                    connections to backends of a service. This resource
                    itself does not affect configuration unless it is
                    attached to a backend service resource.
@@ -1961,14 +1957,14 @@ class NetworkSecurityAsyncClient:
 
         .. code-block:: python
 
-            from google.cloud import network_security_v1beta1
+            from google.cloud import networksecurity_v1
 
             async def sample_delete_client_tls_policy():
                 # Create a client
-                client = network_security_v1beta1.NetworkSecurityAsyncClient()
+                client = networksecurity_v1.NetworkSecurityAsyncClient()
 
                 # Initialize request argument(s)
-                request = network_security_v1beta1.DeleteClientTlsPolicyRequest(
+                request = networksecurity_v1.DeleteClientTlsPolicyRequest(
                     name="name_value",
                 )
 
@@ -1983,7 +1979,7 @@ class NetworkSecurityAsyncClient:
                 print(response)
 
         Args:
-            request (Union[google.cloud.network_security_v1beta1.types.DeleteClientTlsPolicyRequest, dict]):
+            request (Union[google.cloud.networksecurity_v1.types.DeleteClientTlsPolicyRequest, dict]):
                 The request object. Request used by the
                 DeleteClientTlsPolicy method.
             name (:class:`str`):
@@ -2069,617 +2065,6 @@ class NetworkSecurityAsyncClient:
         # Done; return the response.
         return response
 
-    async def list_operations(
-        self,
-        request: operations_pb2.ListOperationsRequest = None,
-        *,
-        retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
-        metadata: Sequence[Tuple[str, str]] = (),
-    ) -> operations_pb2.ListOperationsResponse:
-        r"""Lists operations that match the specified filter in the request.
-
-        Args:
-            request (:class:`~.operations_pb2.ListOperationsRequest`):
-                The request object. Request message for
-                `ListOperations` method.
-            retry (google.api_core.retry.Retry): Designation of what errors,
-                    if any, should be retried.
-            timeout (float): The timeout for this request.
-            metadata (Sequence[Tuple[str, str]]): Strings which should be
-                sent along with the request as metadata.
-        Returns:
-            ~.operations_pb2.ListOperationsResponse:
-                Response message for ``ListOperations`` method.
-        """
-        # Create or coerce a protobuf request object.
-        # The request isn't a proto-plus wrapped type,
-        # so it must be constructed via keyword expansion.
-        if isinstance(request, dict):
-            request = operations_pb2.ListOperationsRequest(**request)
-
-        # Wrap the RPC method; this adds retry and timeout information,
-        # and friendly error handling.
-        rpc = gapic_v1.method.wrap_method(
-            self._client._transport.list_operations,
-            default_timeout=None,
-            client_info=DEFAULT_CLIENT_INFO,
-        )
-
-        # Certain fields should be provided within the metadata header;
-        # add these here.
-        metadata = tuple(metadata) + (
-            gapic_v1.routing_header.to_grpc_metadata((("name", request.name),)),
-        )
-
-        # Send the request.
-        response = await rpc(
-            request,
-            retry=retry,
-            timeout=timeout,
-            metadata=metadata,
-        )
-
-        # Done; return the response.
-        return response
-
-    async def get_operation(
-        self,
-        request: operations_pb2.GetOperationRequest = None,
-        *,
-        retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
-        metadata: Sequence[Tuple[str, str]] = (),
-    ) -> operations_pb2.Operation:
-        r"""Gets the latest state of a long-running operation.
-
-        Args:
-            request (:class:`~.operations_pb2.GetOperationRequest`):
-                The request object. Request message for
-                `GetOperation` method.
-            retry (google.api_core.retry.Retry): Designation of what errors,
-                    if any, should be retried.
-            timeout (float): The timeout for this request.
-            metadata (Sequence[Tuple[str, str]]): Strings which should be
-                sent along with the request as metadata.
-        Returns:
-            ~.operations_pb2.Operation:
-                An ``Operation`` object.
-        """
-        # Create or coerce a protobuf request object.
-        # The request isn't a proto-plus wrapped type,
-        # so it must be constructed via keyword expansion.
-        if isinstance(request, dict):
-            request = operations_pb2.GetOperationRequest(**request)
-
-        # Wrap the RPC method; this adds retry and timeout information,
-        # and friendly error handling.
-        rpc = gapic_v1.method.wrap_method(
-            self._client._transport.get_operation,
-            default_timeout=None,
-            client_info=DEFAULT_CLIENT_INFO,
-        )
-
-        # Certain fields should be provided within the metadata header;
-        # add these here.
-        metadata = tuple(metadata) + (
-            gapic_v1.routing_header.to_grpc_metadata((("name", request.name),)),
-        )
-
-        # Send the request.
-        response = await rpc(
-            request,
-            retry=retry,
-            timeout=timeout,
-            metadata=metadata,
-        )
-
-        # Done; return the response.
-        return response
-
-    async def delete_operation(
-        self,
-        request: operations_pb2.DeleteOperationRequest = None,
-        *,
-        retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
-        metadata: Sequence[Tuple[str, str]] = (),
-    ) -> None:
-        r"""Deletes a long-running operation.
-
-        This method indicates that the client is no longer interested
-        in the operation result. It does not cancel the operation.
-        If the server doesn't support this method, it returns
-        `google.rpc.Code.UNIMPLEMENTED`.
-
-        Args:
-            request (:class:`~.operations_pb2.DeleteOperationRequest`):
-                The request object. Request message for
-                `DeleteOperation` method.
-            retry (google.api_core.retry.Retry): Designation of what errors,
-                    if any, should be retried.
-            timeout (float): The timeout for this request.
-            metadata (Sequence[Tuple[str, str]]): Strings which should be
-                sent along with the request as metadata.
-        Returns:
-            None
-        """
-        # Create or coerce a protobuf request object.
-        # The request isn't a proto-plus wrapped type,
-        # so it must be constructed via keyword expansion.
-        if isinstance(request, dict):
-            request = operations_pb2.DeleteOperationRequest(**request)
-
-        # Wrap the RPC method; this adds retry and timeout information,
-        # and friendly error handling.
-        rpc = gapic_v1.method.wrap_method(
-            self._client._transport.delete_operation,
-            default_timeout=None,
-            client_info=DEFAULT_CLIENT_INFO,
-        )
-
-        # Certain fields should be provided within the metadata header;
-        # add these here.
-        metadata = tuple(metadata) + (
-            gapic_v1.routing_header.to_grpc_metadata((("name", request.name),)),
-        )
-
-        # Send the request.
-        await rpc(
-            request,
-            retry=retry,
-            timeout=timeout,
-            metadata=metadata,
-        )
-
-    async def cancel_operation(
-        self,
-        request: operations_pb2.CancelOperationRequest = None,
-        *,
-        retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
-        metadata: Sequence[Tuple[str, str]] = (),
-    ) -> None:
-        r"""Starts asynchronous cancellation on a long-running operation.
-
-        The server makes a best effort to cancel the operation, but success
-        is not guaranteed.  If the server doesn't support this method, it returns
-        `google.rpc.Code.UNIMPLEMENTED`.
-
-        Args:
-            request (:class:`~.operations_pb2.CancelOperationRequest`):
-                The request object. Request message for
-                `CancelOperation` method.
-            retry (google.api_core.retry.Retry): Designation of what errors,
-                    if any, should be retried.
-            timeout (float): The timeout for this request.
-            metadata (Sequence[Tuple[str, str]]): Strings which should be
-                sent along with the request as metadata.
-        Returns:
-            None
-        """
-        # Create or coerce a protobuf request object.
-        # The request isn't a proto-plus wrapped type,
-        # so it must be constructed via keyword expansion.
-        if isinstance(request, dict):
-            request = operations_pb2.CancelOperationRequest(**request)
-
-        # Wrap the RPC method; this adds retry and timeout information,
-        # and friendly error handling.
-        rpc = gapic_v1.method.wrap_method(
-            self._client._transport.cancel_operation,
-            default_timeout=None,
-            client_info=DEFAULT_CLIENT_INFO,
-        )
-
-        # Certain fields should be provided within the metadata header;
-        # add these here.
-        metadata = tuple(metadata) + (
-            gapic_v1.routing_header.to_grpc_metadata((("name", request.name),)),
-        )
-
-        # Send the request.
-        await rpc(
-            request,
-            retry=retry,
-            timeout=timeout,
-            metadata=metadata,
-        )
-
-    async def set_iam_policy(
-        self,
-        request: iam_policy_pb2.SetIamPolicyRequest = None,
-        *,
-        retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
-        metadata: Sequence[Tuple[str, str]] = (),
-    ) -> policy_pb2.Policy:
-        r"""Sets the IAM access control policy on the specified function.
-
-        Replaces any existing policy.
-
-        Args:
-            request (:class:`~.iam_policy_pb2.SetIamPolicyRequest`):
-                The request object. Request message for `SetIamPolicy`
-                method.
-            retry (google.api_core.retry.Retry): Designation of what errors, if any,
-                should be retried.
-            timeout (float): The timeout for this request.
-            metadata (Sequence[Tuple[str, str]]): Strings which should be
-                sent along with the request as metadata.
-        Returns:
-            ~.policy_pb2.Policy:
-                Defines an Identity and Access Management (IAM) policy.
-                It is used to specify access control policies for Cloud
-                Platform resources.
-                A ``Policy`` is a collection of ``bindings``. A
-                ``binding`` binds one or more ``members`` to a single
-                ``role``. Members can be user accounts, service
-                accounts, Google groups, and domains (such as G Suite).
-                A ``role`` is a named list of permissions (defined by
-                IAM or configured by users). A ``binding`` can
-                optionally specify a ``condition``, which is a logic
-                expression that further constrains the role binding
-                based on attributes about the request and/or target
-                resource.
-                **JSON Example**
-                ::
-                    {
-                      "bindings": [
-                        {
-                          "role": "roles/resourcemanager.organizationAdmin",
-                          "members": [
-                            "user:mike@example.com",
-                            "group:admins@example.com",
-                            "domain:google.com",
-                            "serviceAccount:my-project-id@appspot.gserviceaccount.com"
-                          ]
-                        },
-                        {
-                          "role": "roles/resourcemanager.organizationViewer",
-                          "members": ["user:eve@example.com"],
-                          "condition": {
-                            "title": "expirable access",
-                            "description": "Does not grant access after Sep 2020",
-                            "expression": "request.time <
-                            timestamp('2020-10-01T00:00:00.000Z')",
-                          }
-                        }
-                      ]
-                    }
-                **YAML Example**
-                ::
-                    bindings:
-                    - members:
-                      - user:mike@example.com
-                      - group:admins@example.com
-                      - domain:google.com
-                      - serviceAccount:my-project-id@appspot.gserviceaccount.com
-                      role: roles/resourcemanager.organizationAdmin
-                    - members:
-                      - user:eve@example.com
-                      role: roles/resourcemanager.organizationViewer
-                      condition:
-                        title: expirable access
-                        description: Does not grant access after Sep 2020
-                        expression: request.time < timestamp('2020-10-01T00:00:00.000Z')
-                For a description of IAM and its features, see the `IAM
-                developer's
-                guide <https://cloud.google.com/iam/docs>`__.
-        """
-        # Create or coerce a protobuf request object.
-
-        # The request isn't a proto-plus wrapped type,
-        # so it must be constructed via keyword expansion.
-        if isinstance(request, dict):
-            request = iam_policy_pb2.SetIamPolicyRequest(**request)
-
-        # Wrap the RPC method; this adds retry and timeout information,
-        # and friendly error handling.
-        rpc = gapic_v1.method.wrap_method(
-            self._client._transport.set_iam_policy,
-            default_timeout=None,
-            client_info=DEFAULT_CLIENT_INFO,
-        )
-
-        # Certain fields should be provided within the metadata header;
-        # add these here.
-        metadata = tuple(metadata) + (
-            gapic_v1.routing_header.to_grpc_metadata((("resource", request.resource),)),
-        )
-
-        # Send the request.
-        response = await rpc(
-            request,
-            retry=retry,
-            timeout=timeout,
-            metadata=metadata,
-        )
-
-        # Done; return the response.
-        return response
-
-    async def get_iam_policy(
-        self,
-        request: iam_policy_pb2.GetIamPolicyRequest = None,
-        *,
-        retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
-        metadata: Sequence[Tuple[str, str]] = (),
-    ) -> policy_pb2.Policy:
-        r"""Gets the IAM access control policy for a function.
-
-        Returns an empty policy if the function exists and does not have a
-        policy set.
-
-        Args:
-            request (:class:`~.iam_policy_pb2.GetIamPolicyRequest`):
-                The request object. Request message for `GetIamPolicy`
-                method.
-            retry (google.api_core.retry.Retry): Designation of what errors, if
-                any, should be retried.
-            timeout (float): The timeout for this request.
-            metadata (Sequence[Tuple[str, str]]): Strings which should be
-                sent along with the request as metadata.
-        Returns:
-            ~.policy_pb2.Policy:
-                Defines an Identity and Access Management (IAM) policy.
-                It is used to specify access control policies for Cloud
-                Platform resources.
-                A ``Policy`` is a collection of ``bindings``. A
-                ``binding`` binds one or more ``members`` to a single
-                ``role``. Members can be user accounts, service
-                accounts, Google groups, and domains (such as G Suite).
-                A ``role`` is a named list of permissions (defined by
-                IAM or configured by users). A ``binding`` can
-                optionally specify a ``condition``, which is a logic
-                expression that further constrains the role binding
-                based on attributes about the request and/or target
-                resource.
-                **JSON Example**
-                ::
-                    {
-                      "bindings": [
-                        {
-                          "role": "roles/resourcemanager.organizationAdmin",
-                          "members": [
-                            "user:mike@example.com",
-                            "group:admins@example.com",
-                            "domain:google.com",
-                            "serviceAccount:my-project-id@appspot.gserviceaccount.com"
-                          ]
-                        },
-                        {
-                          "role": "roles/resourcemanager.organizationViewer",
-                          "members": ["user:eve@example.com"],
-                          "condition": {
-                            "title": "expirable access",
-                            "description": "Does not grant access after Sep 2020",
-                            "expression": "request.time <
-                            timestamp('2020-10-01T00:00:00.000Z')",
-                          }
-                        }
-                      ]
-                    }
-                **YAML Example**
-                ::
-                    bindings:
-                    - members:
-                      - user:mike@example.com
-                      - group:admins@example.com
-                      - domain:google.com
-                      - serviceAccount:my-project-id@appspot.gserviceaccount.com
-                      role: roles/resourcemanager.organizationAdmin
-                    - members:
-                      - user:eve@example.com
-                      role: roles/resourcemanager.organizationViewer
-                      condition:
-                        title: expirable access
-                        description: Does not grant access after Sep 2020
-                        expression: request.time < timestamp('2020-10-01T00:00:00.000Z')
-                For a description of IAM and its features, see the `IAM
-                developer's
-                guide <https://cloud.google.com/iam/docs>`__.
-        """
-        # Create or coerce a protobuf request object.
-
-        # The request isn't a proto-plus wrapped type,
-        # so it must be constructed via keyword expansion.
-        if isinstance(request, dict):
-            request = iam_policy_pb2.GetIamPolicyRequest(**request)
-
-        # Wrap the RPC method; this adds retry and timeout information,
-        # and friendly error handling.
-        rpc = gapic_v1.method.wrap_method(
-            self._client._transport.get_iam_policy,
-            default_timeout=None,
-            client_info=DEFAULT_CLIENT_INFO,
-        )
-
-        # Certain fields should be provided within the metadata header;
-        # add these here.
-        metadata = tuple(metadata) + (
-            gapic_v1.routing_header.to_grpc_metadata((("resource", request.resource),)),
-        )
-
-        # Send the request.
-        response = await rpc(
-            request,
-            retry=retry,
-            timeout=timeout,
-            metadata=metadata,
-        )
-
-        # Done; return the response.
-        return response
-
-    async def test_iam_permissions(
-        self,
-        request: iam_policy_pb2.TestIamPermissionsRequest = None,
-        *,
-        retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
-        metadata: Sequence[Tuple[str, str]] = (),
-    ) -> iam_policy_pb2.TestIamPermissionsResponse:
-        r"""Tests the specified IAM permissions against the IAM access control
-            policy for a function.
-
-        If the function does not exist, this will return an empty set
-        of permissions, not a NOT_FOUND error.
-
-        Args:
-            request (:class:`~.iam_policy_pb2.TestIamPermissionsRequest`):
-                The request object. Request message for
-                `TestIamPermissions` method.
-            retry (google.api_core.retry.Retry): Designation of what errors,
-                 if any, should be retried.
-            timeout (float): The timeout for this request.
-            metadata (Sequence[Tuple[str, str]]): Strings which should be
-                sent along with the request as metadata.
-        Returns:
-            ~.iam_policy_pb2.TestIamPermissionsResponse:
-                Response message for ``TestIamPermissions`` method.
-        """
-        # Create or coerce a protobuf request object.
-
-        # The request isn't a proto-plus wrapped type,
-        # so it must be constructed via keyword expansion.
-        if isinstance(request, dict):
-            request = iam_policy_pb2.TestIamPermissionsRequest(**request)
-
-        # Wrap the RPC method; this adds retry and timeout information,
-        # and friendly error handling.
-        rpc = gapic_v1.method.wrap_method(
-            self._client._transport.test_iam_permissions,
-            default_timeout=None,
-            client_info=DEFAULT_CLIENT_INFO,
-        )
-
-        # Certain fields should be provided within the metadata header;
-        # add these here.
-        metadata = tuple(metadata) + (
-            gapic_v1.routing_header.to_grpc_metadata((("resource", request.resource),)),
-        )
-
-        # Send the request.
-        response = await rpc(
-            request,
-            retry=retry,
-            timeout=timeout,
-            metadata=metadata,
-        )
-
-        # Done; return the response.
-        return response
-
-    async def get_location(
-        self,
-        request: locations_pb2.GetLocationRequest = None,
-        *,
-        retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
-        metadata: Sequence[Tuple[str, str]] = (),
-    ) -> locations_pb2.Location:
-        r"""Gets information about a location.
-
-        Args:
-            request (:class:`~.location_pb2.GetLocationRequest`):
-                The request object. Request message for
-                `GetLocation` method.
-            retry (google.api_core.retry.Retry): Designation of what errors,
-                 if any, should be retried.
-            timeout (float): The timeout for this request.
-            metadata (Sequence[Tuple[str, str]]): Strings which should be
-                sent along with the request as metadata.
-        Returns:
-            ~.location_pb2.Location:
-                Location object.
-        """
-        # Create or coerce a protobuf request object.
-        # The request isn't a proto-plus wrapped type,
-        # so it must be constructed via keyword expansion.
-        if isinstance(request, dict):
-            request = locations_pb2.GetLocationRequest(**request)
-
-        # Wrap the RPC method; this adds retry and timeout information,
-        # and friendly error handling.
-        rpc = gapic_v1.method.wrap_method(
-            self._client._transport.get_location,
-            default_timeout=None,
-            client_info=DEFAULT_CLIENT_INFO,
-        )
-
-        # Certain fields should be provided within the metadata header;
-        # add these here.
-        metadata = tuple(metadata) + (
-            gapic_v1.routing_header.to_grpc_metadata((("name", request.name),)),
-        )
-
-        # Send the request.
-        response = await rpc(
-            request,
-            retry=retry,
-            timeout=timeout,
-            metadata=metadata,
-        )
-
-        # Done; return the response.
-        return response
-
-    async def list_locations(
-        self,
-        request: locations_pb2.ListLocationsRequest = None,
-        *,
-        retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
-        metadata: Sequence[Tuple[str, str]] = (),
-    ) -> locations_pb2.ListLocationsResponse:
-        r"""Lists information about the supported locations for this service.
-
-        Args:
-            request (:class:`~.location_pb2.ListLocationsRequest`):
-                The request object. Request message for
-                `ListLocations` method.
-            retry (google.api_core.retry.Retry): Designation of what errors,
-                 if any, should be retried.
-            timeout (float): The timeout for this request.
-            metadata (Sequence[Tuple[str, str]]): Strings which should be
-                sent along with the request as metadata.
-        Returns:
-            ~.location_pb2.ListLocationsResponse:
-                Response message for ``ListLocations`` method.
-        """
-        # Create or coerce a protobuf request object.
-        # The request isn't a proto-plus wrapped type,
-        # so it must be constructed via keyword expansion.
-        if isinstance(request, dict):
-            request = locations_pb2.ListLocationsRequest(**request)
-
-        # Wrap the RPC method; this adds retry and timeout information,
-        # and friendly error handling.
-        rpc = gapic_v1.method.wrap_method(
-            self._client._transport.list_locations,
-            default_timeout=None,
-            client_info=DEFAULT_CLIENT_INFO,
-        )
-
-        # Certain fields should be provided within the metadata header;
-        # add these here.
-        metadata = tuple(metadata) + (
-            gapic_v1.routing_header.to_grpc_metadata((("name", request.name),)),
-        )
-
-        # Send the request.
-        response = await rpc(
-            request,
-            retry=retry,
-            timeout=timeout,
-            metadata=metadata,
-        )
-
-        # Done; return the response.
-        return response
-
     async def __aenter__(self):
         return self
 
@@ -2690,7 +2075,7 @@ class NetworkSecurityAsyncClient:
 try:
     DEFAULT_CLIENT_INFO = gapic_v1.client_info.ClientInfo(
         gapic_version=pkg_resources.get_distribution(
-            "google-cloud-network-security",
+            "google-cloud-networksecurity",
         ).version,
     )
 except pkg_resources.DistributionNotFound:

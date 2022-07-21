@@ -20,19 +20,19 @@
 # It may require modifications to work in your environment.
 
 # To install the latest published package dependency, execute the following:
-#   python3 -m pip install google-cloud-network-security
+#   python3 -m pip install google-cloud-networksecurity
 
 
 # [START networksecurity_v1_generated_NetworkSecurity_GetClientTlsPolicy_sync]
-from google.cloud import network_security_v1
+from google.cloud import networksecurity_v1
 
 
 def sample_get_client_tls_policy():
     # Create a client
-    client = network_security_v1.NetworkSecurityClient()
+    client = networksecurity_v1.NetworkSecurityClient()
 
     # Initialize request argument(s)
-    request = network_security_v1.GetClientTlsPolicyRequest(
+    request = networksecurity_v1.GetClientTlsPolicyRequest(
         name="name_value",
     )
 

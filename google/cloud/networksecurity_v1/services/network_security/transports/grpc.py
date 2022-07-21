@@ -20,24 +20,21 @@ from google.api_core import gapic_v1, grpc_helpers, operations_v1
 import google.auth  # type: ignore
 from google.auth import credentials as ga_credentials  # type: ignore
 from google.auth.transport.grpc import SslCredentials  # type: ignore
-from google.cloud.location import locations_pb2  # type: ignore
-from google.iam.v1 import iam_policy_pb2  # type: ignore
-from google.iam.v1 import policy_pb2  # type: ignore
 from google.longrunning import operations_pb2  # type: ignore
 import grpc  # type: ignore
 
-from google.cloud.network_security_v1beta1.types import (
+from google.cloud.networksecurity_v1.types import (
     authorization_policy as gcn_authorization_policy,
 )
-from google.cloud.network_security_v1beta1.types import (
+from google.cloud.networksecurity_v1.types import (
     client_tls_policy as gcn_client_tls_policy,
 )
-from google.cloud.network_security_v1beta1.types import (
+from google.cloud.networksecurity_v1.types import (
     server_tls_policy as gcn_server_tls_policy,
 )
-from google.cloud.network_security_v1beta1.types import authorization_policy
-from google.cloud.network_security_v1beta1.types import client_tls_policy
-from google.cloud.network_security_v1beta1.types import server_tls_policy
+from google.cloud.networksecurity_v1.types import authorization_policy
+from google.cloud.networksecurity_v1.types import client_tls_policy
+from google.cloud.networksecurity_v1.types import server_tls_policy
 
 from .base import DEFAULT_CLIENT_INFO, NetworkSecurityTransport
 
@@ -284,7 +281,7 @@ class NetworkSecurityGrpcTransport(NetworkSecurityTransport):
         # to pass in the functions for each.
         if "list_authorization_policies" not in self._stubs:
             self._stubs["list_authorization_policies"] = self.grpc_channel.unary_unary(
-                "/google.cloud.networksecurity.v1beta1.NetworkSecurity/ListAuthorizationPolicies",
+                "/google.cloud.networksecurity.v1.NetworkSecurity/ListAuthorizationPolicies",
                 request_serializer=authorization_policy.ListAuthorizationPoliciesRequest.serialize,
                 response_deserializer=authorization_policy.ListAuthorizationPoliciesResponse.deserialize,
             )
@@ -313,7 +310,7 @@ class NetworkSecurityGrpcTransport(NetworkSecurityTransport):
         # to pass in the functions for each.
         if "get_authorization_policy" not in self._stubs:
             self._stubs["get_authorization_policy"] = self.grpc_channel.unary_unary(
-                "/google.cloud.networksecurity.v1beta1.NetworkSecurity/GetAuthorizationPolicy",
+                "/google.cloud.networksecurity.v1.NetworkSecurity/GetAuthorizationPolicy",
                 request_serializer=authorization_policy.GetAuthorizationPolicyRequest.serialize,
                 response_deserializer=authorization_policy.AuthorizationPolicy.deserialize,
             )
@@ -343,7 +340,7 @@ class NetworkSecurityGrpcTransport(NetworkSecurityTransport):
         # to pass in the functions for each.
         if "create_authorization_policy" not in self._stubs:
             self._stubs["create_authorization_policy"] = self.grpc_channel.unary_unary(
-                "/google.cloud.networksecurity.v1beta1.NetworkSecurity/CreateAuthorizationPolicy",
+                "/google.cloud.networksecurity.v1.NetworkSecurity/CreateAuthorizationPolicy",
                 request_serializer=gcn_authorization_policy.CreateAuthorizationPolicyRequest.serialize,
                 response_deserializer=operations_pb2.Operation.FromString,
             )
@@ -373,7 +370,7 @@ class NetworkSecurityGrpcTransport(NetworkSecurityTransport):
         # to pass in the functions for each.
         if "update_authorization_policy" not in self._stubs:
             self._stubs["update_authorization_policy"] = self.grpc_channel.unary_unary(
-                "/google.cloud.networksecurity.v1beta1.NetworkSecurity/UpdateAuthorizationPolicy",
+                "/google.cloud.networksecurity.v1.NetworkSecurity/UpdateAuthorizationPolicy",
                 request_serializer=gcn_authorization_policy.UpdateAuthorizationPolicyRequest.serialize,
                 response_deserializer=operations_pb2.Operation.FromString,
             )
@@ -402,7 +399,7 @@ class NetworkSecurityGrpcTransport(NetworkSecurityTransport):
         # to pass in the functions for each.
         if "delete_authorization_policy" not in self._stubs:
             self._stubs["delete_authorization_policy"] = self.grpc_channel.unary_unary(
-                "/google.cloud.networksecurity.v1beta1.NetworkSecurity/DeleteAuthorizationPolicy",
+                "/google.cloud.networksecurity.v1.NetworkSecurity/DeleteAuthorizationPolicy",
                 request_serializer=authorization_policy.DeleteAuthorizationPolicyRequest.serialize,
                 response_deserializer=operations_pb2.Operation.FromString,
             )
@@ -432,7 +429,7 @@ class NetworkSecurityGrpcTransport(NetworkSecurityTransport):
         # to pass in the functions for each.
         if "list_server_tls_policies" not in self._stubs:
             self._stubs["list_server_tls_policies"] = self.grpc_channel.unary_unary(
-                "/google.cloud.networksecurity.v1beta1.NetworkSecurity/ListServerTlsPolicies",
+                "/google.cloud.networksecurity.v1.NetworkSecurity/ListServerTlsPolicies",
                 request_serializer=server_tls_policy.ListServerTlsPoliciesRequest.serialize,
                 response_deserializer=server_tls_policy.ListServerTlsPoliciesResponse.deserialize,
             )
@@ -460,7 +457,7 @@ class NetworkSecurityGrpcTransport(NetworkSecurityTransport):
         # to pass in the functions for each.
         if "get_server_tls_policy" not in self._stubs:
             self._stubs["get_server_tls_policy"] = self.grpc_channel.unary_unary(
-                "/google.cloud.networksecurity.v1beta1.NetworkSecurity/GetServerTlsPolicy",
+                "/google.cloud.networksecurity.v1.NetworkSecurity/GetServerTlsPolicy",
                 request_serializer=server_tls_policy.GetServerTlsPolicyRequest.serialize,
                 response_deserializer=server_tls_policy.ServerTlsPolicy.deserialize,
             )
@@ -489,7 +486,7 @@ class NetworkSecurityGrpcTransport(NetworkSecurityTransport):
         # to pass in the functions for each.
         if "create_server_tls_policy" not in self._stubs:
             self._stubs["create_server_tls_policy"] = self.grpc_channel.unary_unary(
-                "/google.cloud.networksecurity.v1beta1.NetworkSecurity/CreateServerTlsPolicy",
+                "/google.cloud.networksecurity.v1.NetworkSecurity/CreateServerTlsPolicy",
                 request_serializer=gcn_server_tls_policy.CreateServerTlsPolicyRequest.serialize,
                 response_deserializer=operations_pb2.Operation.FromString,
             )
@@ -517,7 +514,7 @@ class NetworkSecurityGrpcTransport(NetworkSecurityTransport):
         # to pass in the functions for each.
         if "update_server_tls_policy" not in self._stubs:
             self._stubs["update_server_tls_policy"] = self.grpc_channel.unary_unary(
-                "/google.cloud.networksecurity.v1beta1.NetworkSecurity/UpdateServerTlsPolicy",
+                "/google.cloud.networksecurity.v1.NetworkSecurity/UpdateServerTlsPolicy",
                 request_serializer=gcn_server_tls_policy.UpdateServerTlsPolicyRequest.serialize,
                 response_deserializer=operations_pb2.Operation.FromString,
             )
@@ -545,7 +542,7 @@ class NetworkSecurityGrpcTransport(NetworkSecurityTransport):
         # to pass in the functions for each.
         if "delete_server_tls_policy" not in self._stubs:
             self._stubs["delete_server_tls_policy"] = self.grpc_channel.unary_unary(
-                "/google.cloud.networksecurity.v1beta1.NetworkSecurity/DeleteServerTlsPolicy",
+                "/google.cloud.networksecurity.v1.NetworkSecurity/DeleteServerTlsPolicy",
                 request_serializer=server_tls_policy.DeleteServerTlsPolicyRequest.serialize,
                 response_deserializer=operations_pb2.Operation.FromString,
             )
@@ -575,7 +572,7 @@ class NetworkSecurityGrpcTransport(NetworkSecurityTransport):
         # to pass in the functions for each.
         if "list_client_tls_policies" not in self._stubs:
             self._stubs["list_client_tls_policies"] = self.grpc_channel.unary_unary(
-                "/google.cloud.networksecurity.v1beta1.NetworkSecurity/ListClientTlsPolicies",
+                "/google.cloud.networksecurity.v1.NetworkSecurity/ListClientTlsPolicies",
                 request_serializer=client_tls_policy.ListClientTlsPoliciesRequest.serialize,
                 response_deserializer=client_tls_policy.ListClientTlsPoliciesResponse.deserialize,
             )
@@ -603,7 +600,7 @@ class NetworkSecurityGrpcTransport(NetworkSecurityTransport):
         # to pass in the functions for each.
         if "get_client_tls_policy" not in self._stubs:
             self._stubs["get_client_tls_policy"] = self.grpc_channel.unary_unary(
-                "/google.cloud.networksecurity.v1beta1.NetworkSecurity/GetClientTlsPolicy",
+                "/google.cloud.networksecurity.v1.NetworkSecurity/GetClientTlsPolicy",
                 request_serializer=client_tls_policy.GetClientTlsPolicyRequest.serialize,
                 response_deserializer=client_tls_policy.ClientTlsPolicy.deserialize,
             )
@@ -632,7 +629,7 @@ class NetworkSecurityGrpcTransport(NetworkSecurityTransport):
         # to pass in the functions for each.
         if "create_client_tls_policy" not in self._stubs:
             self._stubs["create_client_tls_policy"] = self.grpc_channel.unary_unary(
-                "/google.cloud.networksecurity.v1beta1.NetworkSecurity/CreateClientTlsPolicy",
+                "/google.cloud.networksecurity.v1.NetworkSecurity/CreateClientTlsPolicy",
                 request_serializer=gcn_client_tls_policy.CreateClientTlsPolicyRequest.serialize,
                 response_deserializer=operations_pb2.Operation.FromString,
             )
@@ -660,7 +657,7 @@ class NetworkSecurityGrpcTransport(NetworkSecurityTransport):
         # to pass in the functions for each.
         if "update_client_tls_policy" not in self._stubs:
             self._stubs["update_client_tls_policy"] = self.grpc_channel.unary_unary(
-                "/google.cloud.networksecurity.v1beta1.NetworkSecurity/UpdateClientTlsPolicy",
+                "/google.cloud.networksecurity.v1.NetworkSecurity/UpdateClientTlsPolicy",
                 request_serializer=gcn_client_tls_policy.UpdateClientTlsPolicyRequest.serialize,
                 response_deserializer=operations_pb2.Operation.FromString,
             )
@@ -688,7 +685,7 @@ class NetworkSecurityGrpcTransport(NetworkSecurityTransport):
         # to pass in the functions for each.
         if "delete_client_tls_policy" not in self._stubs:
             self._stubs["delete_client_tls_policy"] = self.grpc_channel.unary_unary(
-                "/google.cloud.networksecurity.v1beta1.NetworkSecurity/DeleteClientTlsPolicy",
+                "/google.cloud.networksecurity.v1.NetworkSecurity/DeleteClientTlsPolicy",
                 request_serializer=client_tls_policy.DeleteClientTlsPolicyRequest.serialize,
                 response_deserializer=operations_pb2.Operation.FromString,
             )
@@ -696,192 +693,6 @@ class NetworkSecurityGrpcTransport(NetworkSecurityTransport):
 
     def close(self):
         self.grpc_channel.close()
-
-    @property
-    def delete_operation(
-        self,
-    ) -> Callable[[operations_pb2.DeleteOperationRequest], None]:
-        r"""Return a callable for the delete_operation method over gRPC."""
-        # Generate a "stub function" on-the-fly which will actually make
-        # the request.
-        # gRPC handles serialization and deserialization, so we just need
-        # to pass in the functions for each.
-        if "delete_operation" not in self._stubs:
-            self._stubs["delete_operation"] = self.grpc_channel.unary_unary(
-                "/google.longrunning.Operations/DeleteOperation",
-                request_serializer=operations_pb2.DeleteOperationRequest.SerializeToString,
-                response_deserializer=None,
-            )
-        return self._stubs["delete_operation"]
-
-    @property
-    def cancel_operation(
-        self,
-    ) -> Callable[[operations_pb2.CancelOperationRequest], None]:
-        r"""Return a callable for the cancel_operation method over gRPC."""
-        # Generate a "stub function" on-the-fly which will actually make
-        # the request.
-        # gRPC handles serialization and deserialization, so we just need
-        # to pass in the functions for each.
-        if "cancel_operation" not in self._stubs:
-            self._stubs["cancel_operation"] = self.grpc_channel.unary_unary(
-                "/google.longrunning.Operations/CancelOperation",
-                request_serializer=operations_pb2.CancelOperationRequest.SerializeToString,
-                response_deserializer=None,
-            )
-        return self._stubs["cancel_operation"]
-
-    @property
-    def get_operation(
-        self,
-    ) -> Callable[[operations_pb2.GetOperationRequest], operations_pb2.Operation]:
-        r"""Return a callable for the get_operation method over gRPC."""
-        # Generate a "stub function" on-the-fly which will actually make
-        # the request.
-        # gRPC handles serialization and deserialization, so we just need
-        # to pass in the functions for each.
-        if "get_operation" not in self._stubs:
-            self._stubs["get_operation"] = self.grpc_channel.unary_unary(
-                "/google.longrunning.Operations/GetOperation",
-                request_serializer=operations_pb2.GetOperationRequest.SerializeToString,
-                response_deserializer=operations_pb2.Operation.FromString,
-            )
-        return self._stubs["get_operation"]
-
-    @property
-    def list_operations(
-        self,
-    ) -> Callable[
-        [operations_pb2.ListOperationsRequest], operations_pb2.ListOperationsResponse
-    ]:
-        r"""Return a callable for the list_operations method over gRPC."""
-        # Generate a "stub function" on-the-fly which will actually make
-        # the request.
-        # gRPC handles serialization and deserialization, so we just need
-        # to pass in the functions for each.
-        if "list_operations" not in self._stubs:
-            self._stubs["list_operations"] = self.grpc_channel.unary_unary(
-                "/google.longrunning.Operations/ListOperations",
-                request_serializer=operations_pb2.ListOperationsRequest.SerializeToString,
-                response_deserializer=operations_pb2.ListOperationsResponse.FromString,
-            )
-        return self._stubs["list_operations"]
-
-    @property
-    def list_locations(
-        self,
-    ) -> Callable[
-        [locations_pb2.ListLocationsRequest], locations_pb2.ListLocationsResponse
-    ]:
-        r"""Return a callable for the list locations method over gRPC."""
-        # Generate a "stub function" on-the-fly which will actually make
-        # the request.
-        # gRPC handles serialization and deserialization, so we just need
-        # to pass in the functions for each.
-        if "list_locations" not in self._stubs:
-            self._stubs["list_locations"] = self.grpc_channel.unary_unary(
-                "/google.cloud.location.Locations/ListLocations",
-                request_serializer=locations_pb2.ListLocationsRequest.SerializeToString,
-                response_deserializer=locations_pb2.ListLocationsResponse.FromString,
-            )
-        return self._stubs["list_locations"]
-
-    @property
-    def get_location(
-        self,
-    ) -> Callable[[locations_pb2.GetLocationRequest], locations_pb2.Location]:
-        r"""Return a callable for the list locations method over gRPC."""
-        # Generate a "stub function" on-the-fly which will actually make
-        # the request.
-        # gRPC handles serialization and deserialization, so we just need
-        # to pass in the functions for each.
-        if "get_location" not in self._stubs:
-            self._stubs["get_location"] = self.grpc_channel.unary_unary(
-                "/google.cloud.location.Locations/GetLocation",
-                request_serializer=locations_pb2.GetLocationRequest.SerializeToString,
-                response_deserializer=locations_pb2.Location.FromString,
-            )
-        return self._stubs["get_location"]
-
-    @property
-    def set_iam_policy(
-        self,
-    ) -> Callable[[iam_policy_pb2.SetIamPolicyRequest], policy_pb2.Policy]:
-        r"""Return a callable for the set iam policy method over gRPC.
-        Sets the IAM access control policy on the specified
-        function. Replaces any existing policy.
-        Returns:
-            Callable[[~.SetIamPolicyRequest],
-                    ~.Policy]:
-                A function that, when called, will call the underlying RPC
-                on the server.
-        """
-        # Generate a "stub function" on-the-fly which will actually make
-        # the request.
-        # gRPC handles serialization and deserialization, so we just need
-        # to pass in the functions for each.
-        if "set_iam_policy" not in self._stubs:
-            self._stubs["set_iam_policy"] = self.grpc_channel.unary_unary(
-                "/google.iam.v1.IAMPolicy/SetIamPolicy",
-                request_serializer=iam_policy_pb2.SetIamPolicyRequest.SerializeToString,
-                response_deserializer=policy_pb2.Policy.FromString,
-            )
-        return self._stubs["set_iam_policy"]
-
-    @property
-    def get_iam_policy(
-        self,
-    ) -> Callable[[iam_policy_pb2.GetIamPolicyRequest], policy_pb2.Policy]:
-        r"""Return a callable for the get iam policy method over gRPC.
-        Gets the IAM access control policy for a function.
-        Returns an empty policy if the function exists and does
-        not have a policy set.
-        Returns:
-            Callable[[~.GetIamPolicyRequest],
-                    ~.Policy]:
-                A function that, when called, will call the underlying RPC
-                on the server.
-        """
-        # Generate a "stub function" on-the-fly which will actually make
-        # the request.
-        # gRPC handles serialization and deserialization, so we just need
-        # to pass in the functions for each.
-        if "get_iam_policy" not in self._stubs:
-            self._stubs["get_iam_policy"] = self.grpc_channel.unary_unary(
-                "/google.iam.v1.IAMPolicy/GetIamPolicy",
-                request_serializer=iam_policy_pb2.GetIamPolicyRequest.SerializeToString,
-                response_deserializer=policy_pb2.Policy.FromString,
-            )
-        return self._stubs["get_iam_policy"]
-
-    @property
-    def test_iam_permissions(
-        self,
-    ) -> Callable[
-        [iam_policy_pb2.TestIamPermissionsRequest],
-        iam_policy_pb2.TestIamPermissionsResponse,
-    ]:
-        r"""Return a callable for the test iam permissions method over gRPC.
-        Tests the specified permissions against the IAM access control
-        policy for a function. If the function does not exist, this will
-        return an empty set of permissions, not a NOT_FOUND error.
-        Returns:
-            Callable[[~.TestIamPermissionsRequest],
-                    ~.TestIamPermissionsResponse]:
-                A function that, when called, will call the underlying RPC
-                on the server.
-        """
-        # Generate a "stub function" on-the-fly which will actually make
-        # the request.
-        # gRPC handles serialization and deserialization, so we just need
-        # to pass in the functions for each.
-        if "test_iam_permissions" not in self._stubs:
-            self._stubs["test_iam_permissions"] = self.grpc_channel.unary_unary(
-                "/google.iam.v1.IAMPolicy/TestIamPermissions",
-                request_serializer=iam_policy_pb2.TestIamPermissionsRequest.SerializeToString,
-                response_deserializer=iam_policy_pb2.TestIamPermissionsResponse.FromString,
-            )
-        return self._stubs["test_iam_permissions"]
 
     @property
     def kind(self) -> str:

@@ -16,7 +16,7 @@
 import proto  # type: ignore
 
 __protobuf__ = proto.module(
-    package="google.cloud.networksecurity.v1beta1",
+    package="google.cloud.networksecurity.v1",
     manifest={
         "GrpcEndpoint",
         "ValidationCA",
@@ -55,12 +55,12 @@ class ValidationCA(proto.Message):
     .. _oneof: https://proto-plus-python.readthedocs.io/en/stable/fields.html#oneofs-mutually-exclusive-fields
 
     Attributes:
-        grpc_endpoint (google.cloud.network_security_v1beta1.types.GrpcEndpoint):
+        grpc_endpoint (google.cloud.networksecurity_v1.types.GrpcEndpoint):
             gRPC specific configuration to access the
             gRPC server to obtain the CA certificate.
 
             This field is a member of `oneof`_ ``type``.
-        certificate_provider_instance (google.cloud.network_security_v1beta1.types.CertificateProviderInstance):
+        certificate_provider_instance (google.cloud.networksecurity_v1.types.CertificateProviderInstance):
             The certificate provider instance
             specification that will be passed to the data
             plane, which will be used to load necessary
@@ -118,12 +118,12 @@ class CertificateProvider(proto.Message):
     .. _oneof: https://proto-plus-python.readthedocs.io/en/stable/fields.html#oneofs-mutually-exclusive-fields
 
     Attributes:
-        grpc_endpoint (google.cloud.network_security_v1beta1.types.GrpcEndpoint):
+        grpc_endpoint (google.cloud.networksecurity_v1.types.GrpcEndpoint):
             gRPC specific configuration to access the
             gRPC server to obtain the cert and private key.
 
             This field is a member of `oneof`_ ``type``.
-        certificate_provider_instance (google.cloud.network_security_v1beta1.types.CertificateProviderInstance):
+        certificate_provider_instance (google.cloud.networksecurity_v1.types.CertificateProviderInstance):
             The certificate provider instance
             specification that will be passed to the data
             plane, which will be used to load necessary

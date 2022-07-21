@@ -18,7 +18,7 @@ from google.protobuf import timestamp_pb2  # type: ignore
 import proto  # type: ignore
 
 __protobuf__ = proto.module(
-    package="google.cloud.networksecurity.v1beta1",
+    package="google.cloud.networksecurity.v1",
     manifest={
         "AuthorizationPolicy",
         "ListAuthorizationPoliciesRequest",
@@ -54,11 +54,11 @@ class AuthorizationPolicy(proto.Message):
         labels (Mapping[str, str]):
             Optional. Set of label tags associated with
             the AuthorizationPolicy resource.
-        action (google.cloud.network_security_v1beta1.types.AuthorizationPolicy.Action):
+        action (google.cloud.networksecurity_v1.types.AuthorizationPolicy.Action):
             Required. The action to take when a rule
             match is found. Possible values are "ALLOW" or
             "DENY".
-        rules (Sequence[google.cloud.network_security_v1beta1.types.AuthorizationPolicy.Rule]):
+        rules (Sequence[google.cloud.networksecurity_v1.types.AuthorizationPolicy.Rule]):
             Optional. List of rules to match. Note that at least one of
             the rules must match in order for the action specified in
             the 'action' field to be taken. A rule is a match if there
@@ -77,13 +77,13 @@ class AuthorizationPolicy(proto.Message):
         r"""Specification of rules.
 
         Attributes:
-            sources (Sequence[google.cloud.network_security_v1beta1.types.AuthorizationPolicy.Rule.Source]):
+            sources (Sequence[google.cloud.networksecurity_v1.types.AuthorizationPolicy.Rule.Source]):
                 Optional. List of attributes for the traffic source. All of
                 the sources must match. A source is a match if both
                 principals and ip_blocks match. If not set, the action
                 specified in the 'action' field will be applied without any
                 rule checks for the source.
-            destinations (Sequence[google.cloud.network_security_v1beta1.types.AuthorizationPolicy.Rule.Destination]):
+            destinations (Sequence[google.cloud.networksecurity_v1.types.AuthorizationPolicy.Rule.Destination]):
                 Optional. List of attributes for the traffic
                 destination. All of the destinations must match.
                 A destination is a match if a request matches
@@ -142,7 +142,7 @@ class AuthorizationPolicy(proto.Message):
                     Optional. A list of HTTP methods to match. At
                     least one method should match. Should not be set
                     for gRPC services.
-                http_header_match (google.cloud.network_security_v1beta1.types.AuthorizationPolicy.Rule.Destination.HttpHeaderMatch):
+                http_header_match (google.cloud.networksecurity_v1.types.AuthorizationPolicy.Rule.Destination.HttpHeaderMatch):
                     Optional. Match against key:value pair in
                     http header. Provides a flexible match based on
                     HTTP headers, for potentially advanced use
@@ -289,7 +289,7 @@ class ListAuthorizationPoliciesResponse(proto.Message):
     r"""Response returned by the ListAuthorizationPolicies method.
 
     Attributes:
-        authorization_policies (Sequence[google.cloud.network_security_v1beta1.types.AuthorizationPolicy]):
+        authorization_policies (Sequence[google.cloud.networksecurity_v1.types.AuthorizationPolicy]):
             List of AuthorizationPolicies resources.
         next_page_token (str):
             If there might be more results than those appearing in this
@@ -342,7 +342,7 @@ class CreateAuthorizationPolicyRequest(proto.Message):
             be created. This value should be 1-63 characters long,
             containing only letters, numbers, hyphens, and underscores,
             and should not start with a number. E.g. "authz_policy".
-        authorization_policy (google.cloud.network_security_v1beta1.types.AuthorizationPolicy):
+        authorization_policy (google.cloud.networksecurity_v1.types.AuthorizationPolicy):
             Required. AuthorizationPolicy resource to be
             created.
     """
@@ -373,7 +373,7 @@ class UpdateAuthorizationPolicyRequest(proto.Message):
             to the resource, not the full request. A field will be
             overwritten if it is in the mask. If the user does not
             provide a mask then all fields will be overwritten.
-        authorization_policy (google.cloud.network_security_v1beta1.types.AuthorizationPolicy):
+        authorization_policy (google.cloud.networksecurity_v1.types.AuthorizationPolicy):
             Required. Updated AuthorizationPolicy
             resource.
     """

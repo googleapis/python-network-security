@@ -17,10 +17,10 @@ from google.protobuf import field_mask_pb2  # type: ignore
 from google.protobuf import timestamp_pb2  # type: ignore
 import proto  # type: ignore
 
-from google.cloud.network_security_v1beta1.types import tls
+from google.cloud.networksecurity_v1.types import tls
 
 __protobuf__ = proto.module(
-    package="google.cloud.networksecurity.v1beta1",
+    package="google.cloud.networksecurity.v1",
     manifest={
         "ServerTlsPolicy",
         "ListServerTlsPoliciesRequest",
@@ -67,12 +67,12 @@ class ServerTlsPolicy(proto.Message):
             Consider using it if you wish to upgrade in place your
             deployment to TLS while having mixed TLS and non-TLS traffic
             reaching port :80.
-        server_certificate (google.cloud.network_security_v1beta1.types.CertificateProvider):
+        server_certificate (google.cloud.networksecurity_v1.types.CertificateProvider):
             Defines a mechanism to provision server identity (public and
             private keys). Cannot be combined with ``allow_open`` as a
             permissive mode that allows both plain text and TLS is not
             supported.
-        mtls_policy (google.cloud.network_security_v1beta1.types.ServerTlsPolicy.MTLSPolicy):
+        mtls_policy (google.cloud.networksecurity_v1.types.ServerTlsPolicy.MTLSPolicy):
             Defines a mechanism to provision peer validation
             certificates for peer to peer authentication (Mutual TLS -
             mTLS). If not specified, client certificate will not be
@@ -85,7 +85,7 @@ class ServerTlsPolicy(proto.Message):
         r"""Specification of the MTLSPolicy.
 
         Attributes:
-            client_validation_ca (Sequence[google.cloud.network_security_v1beta1.types.ValidationCA]):
+            client_validation_ca (Sequence[google.cloud.networksecurity_v1.types.ValidationCA]):
                 Defines the mechanism to obtain the
                 Certificate Authority certificate to validate
                 the client certificate.
@@ -172,7 +172,7 @@ class ListServerTlsPoliciesResponse(proto.Message):
     r"""Response returned by the ListServerTlsPolicies method.
 
     Attributes:
-        server_tls_policies (Sequence[google.cloud.network_security_v1beta1.types.ServerTlsPolicy]):
+        server_tls_policies (Sequence[google.cloud.networksecurity_v1.types.ServerTlsPolicy]):
             List of ServerTlsPolicy resources.
         next_page_token (str):
             If there might be more results than those appearing in this
@@ -225,7 +225,7 @@ class CreateServerTlsPolicyRequest(proto.Message):
             containing only letters, numbers, hyphens, and underscores,
             and should not start with a number. E.g.
             "server_mtls_policy".
-        server_tls_policy (google.cloud.network_security_v1beta1.types.ServerTlsPolicy):
+        server_tls_policy (google.cloud.networksecurity_v1.types.ServerTlsPolicy):
             Required. ServerTlsPolicy resource to be
             created.
     """
@@ -256,7 +256,7 @@ class UpdateServerTlsPolicyRequest(proto.Message):
             resource, not the full request. A field will be overwritten
             if it is in the mask. If the user does not provide a mask
             then all fields will be overwritten.
-        server_tls_policy (google.cloud.network_security_v1beta1.types.ServerTlsPolicy):
+        server_tls_policy (google.cloud.networksecurity_v1.types.ServerTlsPolicy):
             Required. Updated ServerTlsPolicy resource.
     """
 
