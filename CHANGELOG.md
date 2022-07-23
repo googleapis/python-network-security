@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.6.1](https://github.com/googleapis/python-network-security/compare/v0.6.0...v0.6.1) (2022-07-23)
+
+
+### Bug Fixes
+
+* fix annotation of parent in Create*Request ([f53ca2d](https://github.com/googleapis/python-network-security/commit/f53ca2d453468f81eb8adf96e58125e7629ca634))
+
+
+### Documentation
+
+* update the comments of various networksecurity resources ([#115](https://github.com/googleapis/python-network-security/issues/115)) ([f53ca2d](https://github.com/googleapis/python-network-security/commit/f53ca2d453468f81eb8adf96e58125e7629ca634))
+
 ## [0.6.0](https://github.com/googleapis/python-network-security/compare/v0.5.0...v0.6.0) (2022-07-16)
 
 
