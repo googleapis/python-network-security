@@ -20,19 +20,19 @@
 # It may require modifications to work in your environment.
 
 # To install the latest published package dependency, execute the following:
-#   python3 -m pip install google-cloud-networksecurity
+#   python3 -m pip install google-cloud-network-security
 
 
 # [START networksecurity_v1_generated_NetworkSecurity_ListAuthorizationPolicies_sync]
-from google.cloud import networksecurity_v1
+from google.cloud import network_security_v1
 
 
 def sample_list_authorization_policies():
     # Create a client
-    client = networksecurity_v1.NetworkSecurityClient()
+    client = network_security_v1.NetworkSecurityClient()
 
     # Initialize request argument(s)
-    request = networksecurity_v1.ListAuthorizationPoliciesRequest(
+    request = network_security_v1.ListAuthorizationPoliciesRequest(
         parent="parent_value",
     )
 
