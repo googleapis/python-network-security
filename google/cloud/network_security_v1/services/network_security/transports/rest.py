@@ -66,10 +66,6 @@ DEFAULT_CLIENT_INFO = gapic_v1.client_info.ClientInfo(
     rest_version=requests_version,
 )
 
-# TODO (numeric enums): This file was generated with the option to
-#   request that the server respond with enums JSON-encoded as
-#   numbers. The code below does not implement that functionality yet.
-
 
 class NetworkSecurityRestInterceptor:
     """Interceptor for NetworkSecurity.
@@ -86,110 +82,125 @@ class NetworkSecurityRestInterceptor:
 
     .. code-block:: python
         class MyCustomNetworkSecurityInterceptor(NetworkSecurityRestInterceptor):
-            def pre_create_authorization_policy(request, metadata):
+            def pre_create_authorization_policy(self, request, metadata):
                 logging.log(f"Received request: {request}")
                 return request, metadata
 
-            def post_create_authorization_policy(response):
+            def post_create_authorization_policy(self, response):
                 logging.log(f"Received response: {response}")
+                return response
 
-            def pre_create_client_tls_policy(request, metadata):
+            def pre_create_client_tls_policy(self, request, metadata):
                 logging.log(f"Received request: {request}")
                 return request, metadata
 
-            def post_create_client_tls_policy(response):
+            def post_create_client_tls_policy(self, response):
                 logging.log(f"Received response: {response}")
+                return response
 
-            def pre_create_server_tls_policy(request, metadata):
+            def pre_create_server_tls_policy(self, request, metadata):
                 logging.log(f"Received request: {request}")
                 return request, metadata
 
-            def post_create_server_tls_policy(response):
+            def post_create_server_tls_policy(self, response):
                 logging.log(f"Received response: {response}")
+                return response
 
-            def pre_delete_authorization_policy(request, metadata):
+            def pre_delete_authorization_policy(self, request, metadata):
                 logging.log(f"Received request: {request}")
                 return request, metadata
 
-            def post_delete_authorization_policy(response):
+            def post_delete_authorization_policy(self, response):
                 logging.log(f"Received response: {response}")
+                return response
 
-            def pre_delete_client_tls_policy(request, metadata):
+            def pre_delete_client_tls_policy(self, request, metadata):
                 logging.log(f"Received request: {request}")
                 return request, metadata
 
-            def post_delete_client_tls_policy(response):
+            def post_delete_client_tls_policy(self, response):
                 logging.log(f"Received response: {response}")
+                return response
 
-            def pre_delete_server_tls_policy(request, metadata):
+            def pre_delete_server_tls_policy(self, request, metadata):
                 logging.log(f"Received request: {request}")
                 return request, metadata
 
-            def post_delete_server_tls_policy(response):
+            def post_delete_server_tls_policy(self, response):
                 logging.log(f"Received response: {response}")
+                return response
 
-            def pre_get_authorization_policy(request, metadata):
+            def pre_get_authorization_policy(self, request, metadata):
                 logging.log(f"Received request: {request}")
                 return request, metadata
 
-            def post_get_authorization_policy(response):
+            def post_get_authorization_policy(self, response):
                 logging.log(f"Received response: {response}")
+                return response
 
-            def pre_get_client_tls_policy(request, metadata):
+            def pre_get_client_tls_policy(self, request, metadata):
                 logging.log(f"Received request: {request}")
                 return request, metadata
 
-            def post_get_client_tls_policy(response):
+            def post_get_client_tls_policy(self, response):
                 logging.log(f"Received response: {response}")
+                return response
 
-            def pre_get_server_tls_policy(request, metadata):
+            def pre_get_server_tls_policy(self, request, metadata):
                 logging.log(f"Received request: {request}")
                 return request, metadata
 
-            def post_get_server_tls_policy(response):
+            def post_get_server_tls_policy(self, response):
                 logging.log(f"Received response: {response}")
+                return response
 
-            def pre_list_authorization_policies(request, metadata):
+            def pre_list_authorization_policies(self, request, metadata):
                 logging.log(f"Received request: {request}")
                 return request, metadata
 
-            def post_list_authorization_policies(response):
+            def post_list_authorization_policies(self, response):
                 logging.log(f"Received response: {response}")
+                return response
 
-            def pre_list_client_tls_policies(request, metadata):
+            def pre_list_client_tls_policies(self, request, metadata):
                 logging.log(f"Received request: {request}")
                 return request, metadata
 
-            def post_list_client_tls_policies(response):
+            def post_list_client_tls_policies(self, response):
                 logging.log(f"Received response: {response}")
+                return response
 
-            def pre_list_server_tls_policies(request, metadata):
+            def pre_list_server_tls_policies(self, request, metadata):
                 logging.log(f"Received request: {request}")
                 return request, metadata
 
-            def post_list_server_tls_policies(response):
+            def post_list_server_tls_policies(self, response):
                 logging.log(f"Received response: {response}")
+                return response
 
-            def pre_update_authorization_policy(request, metadata):
+            def pre_update_authorization_policy(self, request, metadata):
                 logging.log(f"Received request: {request}")
                 return request, metadata
 
-            def post_update_authorization_policy(response):
+            def post_update_authorization_policy(self, response):
                 logging.log(f"Received response: {response}")
+                return response
 
-            def pre_update_client_tls_policy(request, metadata):
+            def pre_update_client_tls_policy(self, request, metadata):
                 logging.log(f"Received request: {request}")
                 return request, metadata
 
-            def post_update_client_tls_policy(response):
+            def post_update_client_tls_policy(self, response):
                 logging.log(f"Received response: {response}")
+                return response
 
-            def pre_update_server_tls_policy(request, metadata):
+            def pre_update_server_tls_policy(self, request, metadata):
                 logging.log(f"Received request: {request}")
                 return request, metadata
 
-            def post_update_server_tls_policy(response):
+            def post_update_server_tls_policy(self, response):
                 logging.log(f"Received response: {response}")
+                return response
 
         transport = NetworkSecurityRestTransport(interceptor=MyCustomNetworkSecurityInterceptor())
         client = NetworkSecurityClient(transport=transport)
