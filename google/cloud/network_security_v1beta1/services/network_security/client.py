@@ -75,6 +75,7 @@ from google.cloud.network_security_v1beta1.types import tls
 from .transports.base import DEFAULT_CLIENT_INFO, NetworkSecurityTransport
 from .transports.grpc import NetworkSecurityGrpcTransport
 from .transports.grpc_asyncio import NetworkSecurityGrpcAsyncIOTransport
+from .transports.rest import NetworkSecurityRestTransport
 
 
 class NetworkSecurityClientMeta(type):
@@ -90,6 +91,7 @@ class NetworkSecurityClientMeta(type):
     )  # type: Dict[str, Type[NetworkSecurityTransport]]
     _transport_registry["grpc"] = NetworkSecurityGrpcTransport
     _transport_registry["grpc_asyncio"] = NetworkSecurityGrpcAsyncIOTransport
+    _transport_registry["rest"] = NetworkSecurityRestTransport
 
     def get_transport_class(
         cls,
